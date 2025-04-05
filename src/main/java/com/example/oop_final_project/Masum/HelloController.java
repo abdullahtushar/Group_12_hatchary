@@ -1,4 +1,4 @@
-package com.example.oop_final_project;
+package com.example.oop_final_project.Masum;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
