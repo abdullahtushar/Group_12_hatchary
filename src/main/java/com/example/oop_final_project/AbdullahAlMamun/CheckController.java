@@ -1,4 +1,4 @@
 package com.example.oop_final_project.AbdullahAlMamun;
 
-public class Hi {
+public class CheckController {
 }
