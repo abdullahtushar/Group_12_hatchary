@@ -9,5 +9,6 @@ module com.example.oop_final_project {
     exports com.example.oop_final_project.Fahim;
     opens com.example.oop_final_project.AbdullahAlMamun to javafx.fxml;
     exports com.example.oop_final_project.AbdullahAlMamun;
-
+    opens com.example.oop_final_project.AkkhorikAzad to javafx.fxml;
+    exports com.example.oop_final_project.AkkhorikAzad;
 }
