@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="395.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.SalesAndDistributionOfficerDashboardController">
+   <children>
+      <Label alignment="CENTER" layoutX="137.0" layoutY="14.0" prefHeight="52.0" prefWidth="391.0" text="Sales and Distribution Officer Dashboard">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="28.0" layoutY="109.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="127.0" text="Customer Orders" />
+      <Button layoutX="347.0" layoutY="109.0" mnemonicParsing="false" onAction="#inquiriesAndComplaintsOnAction" prefHeight="37.0" prefWidth="137.0" text="Inquiries &amp; Complaints" />
+      <Button layoutX="176.0" layoutY="109.0" mnemonicParsing="false" onAction="#deliveryManagementOnAction" prefHeight="37.0" prefWidth="161.0" text=" Delivery Management" />
+      <Button layoutX="501.0" layoutY="109.0" mnemonicParsing="false" onAction="#marketInsightsOnAction" prefHeight="37.0" prefWidth="137.0" text="Market Insights" />
+      <Button layoutX="501.0" layoutY="177.0" mnemonicParsing="false" onAction="#salesReportsOnAction" prefHeight="37.0" prefWidth="137.0" text="Sales Reports" />
+      <Button layoutX="351.0" layoutY="179.0" mnemonicParsing="false" onAction="#promotionsOnAction" prefHeight="37.0" prefWidth="137.0" text="Promotions" />
+      <Button layoutX="182.0" layoutY="177.0" mnemonicParsing="false" onAction="#customerAndSalesRecordOnAction" prefHeight="37.0" prefWidth="161.0" text="Customer and Sales Record" />
+      <Button layoutX="28.0" layoutY="177.0" mnemonicParsing="false" onAction="#partnershipsOnAction" prefHeight="37.0" prefWidth="127.0" text="Partnerships" />
+      <Button layoutX="544.0" layoutY="323.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" text="Logout" />
+   </children>
+</AnchorPane>
