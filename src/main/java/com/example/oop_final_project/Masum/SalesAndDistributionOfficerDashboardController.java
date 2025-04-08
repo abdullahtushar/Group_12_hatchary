@@ -34,4 +34,8 @@ public class SalesAndDistributionOfficerDashboardController {
     @javafx.fxml.FXML
     public void deliveryManagementOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void customerOrdersOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -13,7 +13,7 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Button layoutX="28.0" layoutY="109.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="127.0" text="Customer Orders" />
+      <Button layoutX="28.0" layoutY="109.0" mnemonicParsing="false" onAction="#customerOrdersOnAction" prefHeight="37.0" prefWidth="127.0" text="Customer Orders" />
       <Button layoutX="347.0" layoutY="109.0" mnemonicParsing="false" onAction="#inquiriesAndComplaintsOnAction" prefHeight="37.0" prefWidth="137.0" text="Inquiries &amp; Complaints" />
       <Button layoutX="176.0" layoutY="109.0" mnemonicParsing="false" onAction="#deliveryManagementOnAction" prefHeight="37.0" prefWidth="161.0" text=" Delivery Management" />
       <Button layoutX="501.0" layoutY="109.0" mnemonicParsing="false" onAction="#marketInsightsOnAction" prefHeight="37.0" prefWidth="137.0" text="Market Insights" />
