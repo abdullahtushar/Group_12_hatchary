@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.MarketInsightsController">
+   <children>
+      <Label layoutX="237.0" layoutY="25.0" text="Market Demand ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="fishTypeCB" layoutX="212.0" layoutY="75.0" prefHeight="25.0" prefWidth="115.0" promptText="Fish Type" />
+      <TextField fx:id="areaTF" layoutX="72.0" layoutY="75.0" prefHeight="25.0" prefWidth="127.0" />
+      <Text layoutX="23.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area" wrappingWidth="37.428375244140625" />
+      <DatePicker fx:id="analysisStartDate" layoutX="435.0" layoutY="75.0" prefHeight="25.0" prefWidth="141.0" />
+      <Label layoutX="364.0" layoutY="79.0" prefHeight="17.0" prefWidth="56.0" text="Start Date" />
+      <TableView fx:id="marketDemundTableView" layoutX="14.0" layoutY="143.0" prefHeight="200.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="areaColumn" prefWidth="109.99996948242188" text="Area" />
+          <TableColumn fx:id="fishName" prefWidth="106.66668701171875" text="Fish Name" />
+            <TableColumn fx:id="totalSellsAmountKGTF" prefWidth="182.00003051757812" text="Total Sells Amount (kg)" />
+            <TableColumn fx:id="pricePerKgColumn" prefWidth="163.99993896484375" text="Price Per Kg" />
+        </columns>
+      </TableView>
+      <Button layoutX="16.0" layoutY="12.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="506.0" layoutY="352.0" mnemonicParsing="false" text="Logout" />
+      <Button layoutX="242.0" layoutY="352.0" mnemonicParsing="false" onAction="#setFishPriceOnAction" text="Set Fish Price" />
+   </children>
+</AnchorPane>
