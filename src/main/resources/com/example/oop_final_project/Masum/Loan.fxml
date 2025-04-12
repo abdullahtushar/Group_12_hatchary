@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="461.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.LoanController">
+   <children>
+      <Label layoutX="295.0" layoutY="16.0" text="Loan">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="84.0" text="Purpose of loan" />
+      <Label layoutX="33.0" layoutY="84.0" text="Loan amount" />
+      <Label layoutX="316.0" layoutY="128.0" text="Loan return date" />
+      <TextField fx:id="loanAmountTF" layoutX="127.0" layoutY="80.0" />
+      <TextField fx:id="loanPurposeTF" layoutX="430.0" layoutY="80.0" />
+      <DatePicker fx:id="returnDateDP" layoutX="430.0" layoutY="124.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="525.0" layoutY="419.0" mnemonicParsing="false" onDragDetected="#logoutOnAction" text="Logout" />
+      <Button layoutX="478.0" layoutY="163.0" mnemonicParsing="false" onDragDetected="#applyLoanOnAction" text="Apply for Loan" />
+      <Button layoutX="33.0" layoutY="31.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
+      <Label layoutX="33.0" layoutY="128.0" text="Loan apply date" />
+      <DatePicker fx:id="ApplyDateDP" layoutX="127.0" layoutY="124.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="errorLabel" layoutX="38.0" layoutY="157.0" prefHeight="63.0" prefWidth="425.0" />
+      <TableView fx:id="loanTableView" layoutX="3.0" layoutY="230.0" prefHeight="172.0" prefWidth="611.0">
+        <columns>
+          <TableColumn fx:id="loanIdColumn" prefWidth="75.0" text="Loan Id" />
+          <TableColumn fx:id="loanAmountColumn" prefWidth="84.6666488647461" text="Loan Amount" />
+            <TableColumn fx:id="loanPurposeColumn" prefWidth="112.00001525878906" text="Loan Purpose" />
+            <TableColumn fx:id="loanApplyDateColumn" prefWidth="135.33331298828125" text="Loan Apply Date" />
+            <TableColumn fx:id="loanReturnDateColumn" prefWidth="105.33334350585938" text="Loan Return Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="99.3333740234375" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
