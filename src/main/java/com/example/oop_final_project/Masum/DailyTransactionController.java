@@ -2,7 +2,6 @@ package com.example.oop_final_project.Masum;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import javafx.scene.text;
 import javafx.scene.text.Text;
 
 public class DailyTransactionController {
