@@ -2,6 +2,7 @@ package com.example.oop_final_project.Masum;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.text;
 import javafx.scene.text.Text;
 
 public class DailyTransactionController {
@@ -18,8 +19,6 @@ public class DailyTransactionController {
     @javafx.fxml.FXML
     private TableColumn noteColumn;
     @javafx.fxml.FXML
-    private Text dailyTransactionTable;
-    @javafx.fxml.FXML
     private DatePicker addDP;
     @javafx.fxml.FXML
     private TableColumn amountColumn;
@@ -29,6 +28,8 @@ public class DailyTransactionController {
     private TextField amountTF;
     @javafx.fxml.FXML
     private ComboBox incomeOrExpanceCB;
+    @javafx.fxml.FXML
+    private TableView dailyTransactionTable;
 
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) {
