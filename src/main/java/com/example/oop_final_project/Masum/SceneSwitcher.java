@@ -1,5 +1,4 @@
 package com.example.oop_final_project.Masum;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,14 +10,20 @@ import java.io.IOException;
 
 public class SceneSwitcher {
     public static Stage stage;
-    public static void switchTo(String fxml, ActionEvent actionEvent) throws IOException{
-        Parent root = FXMLLoader.load(SceneSwitcher.class.getResource(fxml)) ;
-        Scene scene= new Scene(root);
+
+    public static void switchTo(String fxml, ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(
+                SceneSwitcher.class.getResource(fxml)
+        );
+        Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
     }
-    public void switchTo(String fxml) throws IOException{
-        Parent root = FXMLLoader.load(SceneSwitcher.class.getResource(fxml));
+
+    public static void switchTo(String fxml) throws IOException {
+        Parent root = FXMLLoader.load(
+                SceneSwitcher.class.getResource(fxml)
+        );
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }

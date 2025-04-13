@@ -2,6 +2,8 @@ package com.example.oop_final_project.Masum;
 
 import javafx.event.ActionEvent;
 
+import java.io.IOException;
+
 public class SalesAndDistributionOfficerDashboardController {
     @javafx.fxml.FXML
     public void inquiriesAndComplaintsOnAction(ActionEvent actionEvent) {
@@ -20,7 +22,8 @@ public class SalesAndDistributionOfficerDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void customerAndSalesRecordOnAction(ActionEvent actionEvent) {
+    public void customerAndSalesRecordOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("", actionEvent);
     }
 
     @javafx.fxml.FXML
