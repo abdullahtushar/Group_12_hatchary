@@ -6,6 +6,16 @@ public class Budget {
     private double feed, medicine, utility, salaries, total;
     private LocalDate startDate, endDate;
 
+    public Budget(double feed, double medicine, double utility, double salaries, double total, LocalDate startDate, LocalDate endDate) {
+        this.feed = feed;
+        this.medicine = medicine;
+        this.utility = utility;
+        this.salaries = salaries;
+        this.total = total;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     public double getFeed() {
         return feed;
     }
