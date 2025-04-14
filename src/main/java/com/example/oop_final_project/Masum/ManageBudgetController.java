@@ -103,16 +103,16 @@ public class ManageBudgetController {
         double total = feed + medicine + utility + salaries;
         LocalDate startDate = startDateDP.getValue();
         LocalDate endDate = endDateDP.getValue();
-        Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate);
         for (Budget budget1:budgetList){
             if (budget1.getStartDate().isEqual(startDate)||budget1.getEndDate().isEqual(endDate)){
                 errorLabel.setText("Budget already exist");
                 return;
             }
         }
+        Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate);
         budgetList.add(budget);
         addBudgetTable.getItems().clear();
-        addBudgetTable.getItems().setAll(budget);
+        addBudgetTable.getItems().setAll(budgetList);
         errorLabel.setText("Budget created successfully");
 
 
