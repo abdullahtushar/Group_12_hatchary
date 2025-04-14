@@ -48,6 +48,7 @@ public class DailyTransactionController {
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
     }
     ArrayList<DailyTransaction>dailyTransactionsList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FinanceOfficerDashboard.fxml"));
@@ -69,21 +70,46 @@ public class DailyTransactionController {
 
     @javafx.fxml.FXML
     public void addTransactionOnAction(ActionEvent actionEvent) {
-        if(incomeOrExpanceCB.getItems()==null){errorLabe.setText("Select type");return;}
-        if (amountTF.getText().isEmpty()){errorLabe.setText("Enter type");return;}
-        if (noteTF.getText().isEmpty()){errorLabe.setText("Enter note");return;}
-        if (addDP.getValue()==null){errorLabe.setText("Enter date");return;}
-        if (sourcePurposeTF.getText().isEmpty()){
+        if (incomeOrExpanceCB.getItems() == null) {
+            errorLabe.setText("Select type");
+            return;
+        }
+        if (amountTF.getText().isEmpty()) {
+            errorLabe.setText("Enter type");
+            return;
+        }
+        if (noteTF.getText().isEmpty()) {
+            errorLabe.setText("Enter note");
+            return;
+        }
+        if (addDP.getValue() == null) {
+            errorLabe.setText("Enter date");
+            return;
+        }
+        if (sourcePurposeTF.getText().isEmpty()) {
             errorLabe.setText("Enter Source or purpose");
             return;
         }
         DailyTransaction dailyTransaction = new DailyTransaction(incomeOrExpanceCB.getValue(),
-                sourcePurposeTF.getText(),Double.parseDouble(amountTF.getText()),
-                noteTF.getText(),addDP.getValue());
-                dailyTransactionsList.add(dailyTransaction);
-                dailyTransactionTable.getItems().clear();
-               dailyTransactionTable.getItems().setAll(dailyTransactionsList);
-               errorLabe.setText("Transaction added successfully");
+                sourcePurposeTF.getText(), Double.parseDouble(amountTF.getText()),
+                noteTF.getText(), addDP.getValue());
+//        dailyTransactionsList.add(dailyTransaction);
+//        dailyTransactionTable.getItems().clear();
+//        dailyTransactionTable.getItems().setAll(dailyTransactionsList);
+        errorLabe.setText("Transaction added successfully");
+        for (DailyTransaction dt: dailyTransactionsList){
+            if (dt.getDate().isEqual(addDP.getValue())){
+                if (dt.getNotes().equals(noteTF.getText())||dt.getSourceOrPurpose().equals(sourcePurposeTF.getText())){
+                    errorLabe.setText("Transaction already exist exist");
+                    return;
+                }
+            }
+        }
+        dailyTransactionsList.add(dailyTransaction);
+        dailyTransactionTable.getItems().clear();
+        dailyTransactionTable.getItems().setAll(dailyTransactionsList);
+        errorLabe.setText("Transaction added  successfully");
+
 
 
     }
