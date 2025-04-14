@@ -38,4 +38,15 @@ public class FinanceOfficerDashboardController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void addPaySalaryOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AddAndPaySalaries.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
 }
