@@ -39,7 +39,7 @@ public class LoginController {
         else if("masum".equals(username.trim())&&"1122".equals(password.trim())&&"Finance Officer".equals(usertype)){
             loginErrorLabel.setText("Login Successful");
             //SceneSwitcher.switchTo("Masum/FinanceOfficerDashboard.fxml");
-            //
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Masum/FinanceOfficerDashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) usernameTF.getScene().getWindow();
