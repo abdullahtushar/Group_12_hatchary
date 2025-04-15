@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="515.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.ShowCustomerOrdersViewController">
+    <children>
+        <Label fx:id="showPricePerKgLabel" layoutX="318.0" layoutY="135.0" prefHeight="25.0" prefWidth="81.0" />
+        <Label fx:id="showFishNameTF" layoutX="82.0" layoutY="182.0" prefHeight="25.0" prefWidth="81.0" />
+        <TableView fx:id="OrderTableView" layoutX="3.0" layoutY="26.0" prefHeight="159.0" prefWidth="678.0">
+            <columns>
+                <TableColumn fx:id="customerNameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="customerPhoneColumn" prefWidth="75.0" text="Phone" />
+                <TableColumn fx:id="customerLocationColumn" prefWidth="50.666656494140625" text="Area" />
+                <TableColumn fx:id="fishNameColumn" prefWidth="77.33335876464844" text="Fish Name" />
+                <TableColumn fx:id="pricePerKgColumn" prefWidth="82.0" text="Price Per kg" />
+                <TableColumn fx:id="fishAmountColumn" prefWidth="123.33331298828125" text="Fish Amount (kg)" />
+                <TableColumn fx:id="totalCostCoumn" minWidth="0.0" prefWidth="90.66665649414062" text="Total Cost" />
+            <TableColumn fx:id="statusColumn" minWidth="0.0" prefWidth="103.3333740234375" text="Status" />
+            </columns>
+        </TableView>
+      <Button layoutX="579.0" layoutY="228.0" mnemonicParsing="false" onAction="#updateStatusOnAction" text="Update Status" />
+      <TableView fx:id="updateOrderStutusTableView" layoutY="308.0" prefHeight="159.0" prefWidth="678.0">
+         <columns>
+            <TableColumn fx:id="showCustomerNameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="showCustomerPhoneColumn" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="showCustomerLocationColumn" prefWidth="50.666656494140625" text="Area" />
+            <TableColumn fx:id="showFishNameColumn" prefWidth="77.33335876464844" text="Fish Name" />
+            <TableColumn fx:id="showPricePerKgColumn" prefWidth="82.0" text="Price Per kg" />
+            <TableColumn fx:id="showFishAmountColumn" prefWidth="123.33331298828125" text="Fish Amount (kg)" />
+            <TableColumn fx:id="showTotalCostCoumn" minWidth="0.0" prefWidth="90.66665649414062" text="Total Cost" />
+            <TableColumn fx:id="updateStutasCoumn" minWidth="0.0" prefWidth="103.3333740234375" text="Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="232.0" mnemonicParsing="false" onAction="#checkAvaibilityOnAction" text="Check Avaibility" />
+      <ComboBox layoutX="494.0" layoutY="194.0" prefHeight="25.0" prefWidth="170.0" promptText="Update Order Status" />
+      <Button layoutX="14.0" layoutY="1.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="624.0" layoutY="475.0" mnemonicParsing="false" text="Logout" />
+      <Label fx:id="updateStatusErrorLabel" layoutX="133.0" layoutY="211.0" prefHeight="59.0" prefWidth="337.0" />
+      <Button layoutX="470.0" layoutY="228.0" mnemonicParsing="false" onAction="#approveOrderOnAction" text="Approve Order" />
+      <Button layoutX="500.0" layoutY="270.0" mnemonicParsing="false" onAction="#generateInvoiceOnAction" prefHeight="33.0" prefWidth="162.0" text="Generate Invoice" />
+    </children>
+</AnchorPane>

@@ -103,12 +103,21 @@ public class ManageBudgetController {
         double total = feed + medicine + utility + salaries;
         LocalDate startDate = startDateDP.getValue();
         LocalDate endDate = endDateDP.getValue();
-        for (Budget budget1:budgetList){
-            if (budget1.getStartDate().isEqual(startDate)||budget1.getEndDate().isEqual(endDate)){
-                errorLabel.setText("Budget already exist");
+//        for (Budget budget1:budgetList){
+//            if (budget1.getStartDate().isEqual(startDate)||budget1.getEndDate().isEqual(endDate)){
+//                errorLabel.setText("Budget already exist");
+//                return;
+//            }
+//        }
+        for (Budget existBudget : budgetList) {
+            boolean overlap = existBudget.getStartDate().isEqual(startDate) ||
+                    existBudget.getEndDate().isEqual(endDate);
+            if (overlap) {
+                errorLabel.setText("Budget already exists for the selected period.");
                 return;
             }
         }
+
         Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate);
         budgetList.add(budget);
         addBudgetTable.getItems().clear();
