@@ -40,7 +40,7 @@ public class DailyTransactionController {
     @javafx.fxml.FXML
     private TableView<DailyTransaction> dailyTransactionTable;
     public void initialize(){
-        incomeOrExpanceCB.getItems().addAll("Income","Expance");
+        incomeOrExpanceCB.getItems().addAll("Income","Expanse");
         incomeOrExpanceColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         sourceOrPurposeColumn.setCellValueFactory(new PropertyValueFactory<>("sourceOrPurpose"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
@@ -48,6 +48,7 @@ public class DailyTransactionController {
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
     }
     ArrayList<DailyTransaction>dailyTransactionsList = new ArrayList<>();
+    public static ArrayList<Summary> summaryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) throws IOException {
@@ -70,10 +71,7 @@ public class DailyTransactionController {
 
     @javafx.fxml.FXML
     public void addTransactionOnAction(ActionEvent actionEvent) {
-        if (incomeOrExpanceCB.getItems() == null) {
-            errorLabe.setText("Select type");
-            return;
-        }
+
         if (amountTF.getText().isEmpty()) {
             errorLabe.setText("Enter type");
             return;
@@ -88,6 +86,10 @@ public class DailyTransactionController {
         }
         if (sourcePurposeTF.getText().isEmpty()) {
             errorLabe.setText("Enter Source or purpose");
+            return;
+        }
+        if (incomeOrExpanceCB.getValue() == null) {
+            errorLabe.setText("Select type");
             return;
         }
         DailyTransaction dailyTransaction = new DailyTransaction(incomeOrExpanceCB.getValue(),
@@ -109,6 +111,32 @@ public class DailyTransactionController {
         dailyTransactionTable.getItems().clear();
         dailyTransactionTable.getItems().setAll(dailyTransactionsList);
         errorLabe.setText("Transaction added  successfully");
+
+        boolean summaryFound = false;
+        for (Summary summary : summaryList) {
+            if (summary.getDate().isEqual(addDP.getValue())) {
+                if (incomeOrExpanceCB.getValue().equals("Income")) {
+                    summary.setTotalIncome(summary.getTotalIncome() + Double.parseDouble(amountTF.getText()));
+                } else {
+                    summary.setTotalExpense(summary.getTotalExpense() + Double.parseDouble(amountTF.getText()));
+                }
+                summary.setNetProfitOrLoss(summary.getTotalIncome() - summary.getTotalExpense());
+                summaryFound = true;
+                break;
+            }
+        }
+
+        if (!summaryFound) {
+            double income = 0, expense = 0;
+            if (incomeOrExpanceCB.getValue().equals("Income")) {
+                income = Double.parseDouble(amountTF.getText());
+            } else {
+                expense = Double.parseDouble(amountTF.getText());
+            }
+            Summary newSummary = new Summary(income, expense, income - expense, addDP.getValue());
+            summaryList.add(newSummary);
+        }
+
 
 
 
