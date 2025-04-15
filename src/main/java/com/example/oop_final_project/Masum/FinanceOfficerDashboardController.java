@@ -49,4 +49,13 @@ public class FinanceOfficerDashboardController {
 
 
     }
+
+    @javafx.fxml.FXML
+    public void reportonAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Financial Reports.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }

@@ -18,7 +18,7 @@
       <Button layoutX="317.0" layoutY="91.0" mnemonicParsing="false" onAction="#addPaySalaryOnAction" prefHeight="61.0" prefWidth="131.0" text="Add and Pay Salary" />
       <Button layoutX="14.0" layoutY="174.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="131.0" text="Button" />
       <Button layoutX="160.0" layoutY="174.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="131.0" text="Button" />
-      <Button layoutX="460.0" layoutY="91.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="131.0" text="Button" />
+      <Button layoutX="460.0" layoutY="91.0" mnemonicParsing="false" onAction="#reportonAction" prefHeight="61.0" prefWidth="131.0" text="Financial Report" />
       <Button layoutX="460.0" layoutY="174.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="131.0" text="Button" />
       <Button layoutX="317.0" layoutY="173.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="131.0" text="Button" />
    </children>
