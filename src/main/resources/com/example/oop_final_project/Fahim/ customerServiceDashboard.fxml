@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Fahim.CustomerServiceDashboard">
+   <children>
+      <Button layoutX="525.0" layoutY="212.0" mnemonicParsing="false" onAction="#customerDatabaseButton" text="Customer Database" />
+      <Button layoutX="198.0" layoutY="146.0" mnemonicParsing="false" onAction="#customerComplaintsButton" prefHeight="25.0" prefWidth="134.0" text="Customer Complaints" />
+      <Button layoutX="198.0" layoutY="212.0" mnemonicParsing="false" onAction="#ordersAndPaymentsButton" prefHeight="25.0" prefWidth="134.0" text="Orders &amp; Payments" />
+      <Button layoutX="525.0" layoutY="146.0" mnemonicParsing="false" onAction="#farmVisitButton" prefHeight="25.0" prefWidth="120.0" text="Farm Visit " />
+      <Button layoutX="370.0" layoutY="146.0" mnemonicParsing="false" onAction="#farmInformationButton" prefHeight="25.0" prefWidth="126.0" text="Farm Information" />
+      <Button layoutX="47.0" layoutY="146.0" mnemonicParsing="false" onAction="#customerInquiriesButton" prefHeight="25.0" prefWidth="126.0" text="Customer Inquiries" />
+      <Button layoutX="47.0" layoutY="212.0" mnemonicParsing="false" onAction="#customerFeedbackButton" prefHeight="25.0" prefWidth="126.0" text="Customer Feedback" />
+      <Button layoutX="370.0" layoutY="212.0" mnemonicParsing="false" onAction="#promotionsAndOffersButton" text="Promotions &amp; Offers" />
+      <Text layoutX="179.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Service Representative">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
