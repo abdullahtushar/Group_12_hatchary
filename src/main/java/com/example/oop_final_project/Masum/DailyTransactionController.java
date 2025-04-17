@@ -48,7 +48,7 @@ public class DailyTransactionController {
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
     }
     ArrayList<DailyTransaction>dailyTransactionsList = new ArrayList<>();
-    public static ArrayList<Summary> summaryList= new ArrayList<>();
+    static ArrayList<Summary> summaryList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) throws IOException {
