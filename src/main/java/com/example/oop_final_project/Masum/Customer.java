@@ -1,17 +1,23 @@
 package com.example.oop_final_project.Masum;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.time.LocalDate;
 
-public class Customer {
-    private String orderId, name, phone, location;
-    private ArrayList<OrderItem> orderHistory;
+public class Customer implements Serializable {
+    private String name, phone, location, fishName, status;
+    private double orderAmount, pricePerkg, total;
+    private LocalDate orderDate;
 
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public Customer(String name, String phone, String location, String fishName, String status, double orderAmount, double pricePerkg, double total, LocalDate orderDate) {
+        this.name = name;
+        this.phone = phone;
+        this.location = location;
+        this.fishName = fishName;
+        this.status = status;
+        this.orderAmount = orderAmount;
+        this.pricePerkg = pricePerkg;
+        this.total = total;
+        this.orderDate = orderDate;
     }
 
     public String getName() {
@@ -38,23 +44,51 @@ public class Customer {
         this.location = location;
     }
 
-    public ArrayList<OrderItem> getOrderHistory() {
-        return orderHistory;
+    public String getFishName() {
+        return fishName;
     }
 
-    public void setOrderHistory(ArrayList<OrderItem> orderHistory) {
-        this.orderHistory = orderHistory;
+    public void setFishName(String fishName) {
+        this.fishName = fishName;
     }
 
+    public String getStatus() {
+        return status;
+    }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "orderId='" + orderId + '\'' +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", location='" + location + '\'' +
-                ", orderHistory=" + orderHistory +
-                '}';
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public double getOrderAmount() {
+        return orderAmount;
+    }
+
+    public void setOrderAmount(double orderAmount) {
+        this.orderAmount = orderAmount;
+    }
+
+    public double getPricePerkg() {
+        return pricePerkg;
+    }
+
+    public void setPricePerkg(double pricePerkg) {
+        this.pricePerkg = pricePerkg;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDate orderDate) {
+        this.orderDate = orderDate;
     }
 }
