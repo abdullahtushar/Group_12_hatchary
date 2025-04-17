@@ -10,13 +10,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.OrderItemCustomerController">
    <children>
-      <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="46.80340576171875" />
-      <TextField fx:id="customerNameTF" layoutX="111.0" layoutY="29.0" />
-      <Label layoutX="288.0" layoutY="33.0" text="Phone Number" />
-      <TextField fx:id="customerPhoneTF" layoutX="400.0" layoutY="29.0" />
+      <Text layoutX="45.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="46.80340576171875" />
+      <TextField fx:id="customerNameTF" layoutX="111.0" layoutY="41.0" />
+      <Label layoutX="289.0" layoutY="45.0" text="Phone Number" />
+      <TextField fx:id="customerPhoneTF" layoutX="399.0" layoutY="41.0" />
       <Label layoutX="44.0" layoutY="88.0" text="Area" />
       <TextField fx:id="customerLocationTF" layoutX="111.0" layoutY="84.0" />
       <DatePicker fx:id="showOrderDateDPicker" editable="false" layoutX="399.0" layoutY="84.0" prefHeight="25.0" prefWidth="149.0" />
@@ -26,13 +25,8 @@
       <Label fx:id="showPricePerKgLabel" layoutX="318.0" layoutY="135.0" prefHeight="25.0" prefWidth="81.0" />
       <Label layoutX="417.0" layoutY="143.0" prefHeight="17.0" prefWidth="95.0" text="Fish Amount (kg)" />
       <TextField fx:id="fishAmountTF" layoutX="526.0" layoutY="139.0" prefHeight="25.0" prefWidth="59.0" />
-      <Label layoutX="14.0" layoutY="182.0" prefHeight="17.0" prefWidth="67.0" text="Fish Name" />
-      <Label fx:id="showFishNameTF" layoutX="82.0" layoutY="182.0" prefHeight="25.0" prefWidth="81.0" />
-      <Label layoutX="186.0" layoutY="186.0" prefHeight="17.0" prefWidth="123.0" text="Purchase Amount (kg)" />
       <Label fx:id="showFishAmountTF" layoutX="329.0" layoutY="182.0" prefHeight="25.0" prefWidth="59.0" />
-      <Label layoutX="407.0" layoutY="186.0" prefHeight="17.0" prefWidth="47.0" text="Cost" />
-      <Label fx:id="showTotalCostTF" layoutX="454.0" layoutY="182.0" prefHeight="25.0" prefWidth="81.0" />
-      <TableView fx:id="OrderTableView" layoutX="2.0" layoutY="253.0" prefHeight="159.0" prefWidth="614.0">
+      <TableView fx:id="OrderTableView" layoutX="1.0" layoutY="238.0" prefHeight="159.0" prefWidth="614.0">
         <columns>
           <TableColumn fx:id="customerNameColumn" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="customerPhoneColumn" prefWidth="75.0" text="Phone" />
@@ -43,8 +37,11 @@
             <TableColumn fx:id="totalCostCoumn" prefWidth="118.66668701171875" text="Total Cost" />
         </columns>
       </TableView>
-      <Label fx:id="errorLabel" layoutX="15.0" layoutY="212.0" prefHeight="32.0" prefWidth="330.0" style="-fx-border-color: black;" />
-      <Button layoutX="355.0" layoutY="215.0" mnemonicParsing="false" onAction="#submitOrderOnAction" prefHeight="25.0" prefWidth="103.0" text="Submit Order" />
-      <Button layoutX="495.0" layoutY="215.0" mnemonicParsing="false" onAction="#generateInvoiceOnAction" text="Generate Invoice" />
+      <Label fx:id="errorLabel" layoutX="14.0" layoutY="172.0" prefHeight="60.0" prefWidth="330.0" style="-fx-border-color: black;" />
+      <Button layoutX="348.0" layoutY="202.0" mnemonicParsing="false" onAction="#submitOrderOnAction" prefHeight="25.0" prefWidth="103.0" text="Submit Order" />
+      <Button layoutX="489.0" layoutY="202.0" mnemonicParsing="false" onAction="#generateInvoiceOnAction" text="Generate Invoice" />
+      <Button layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#backonAction" text="Back" />
+      <Button layoutX="542.0" layoutY="407.0" mnemonicParsing="false" onAction="#logoutOnaction" text="Logout" />
+      <Button layoutX="516.0" layoutY="170.0" mnemonicParsing="false" onAction="#saveOrderOnAction" text="Save Order" />
    </children>
 </AnchorPane>
