@@ -2,6 +2,7 @@ package com.example.oop_final_project;
 
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
@@ -26,7 +27,7 @@ public class LoginController {
         userTypeCB.getItems().addAll("Farm Manager", "Aquaculture Specialist",
                 "Finance Officer", "Sales and Distribution Officer",
                 "Inventory and Supply Manager", "Customer service representative",
-                "Technical Support Officer", "Social Media Manager");
+                "Technical Support Officer", "Social Media Manager","Customer");
     }
     @javafx.fxml.FXML
     public void loginOnAction(Event event) throws IOException {
@@ -45,9 +46,23 @@ public class LoginController {
             Stage stage = (Stage) usernameTF.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
-        }else {
+        }
+        else if("masum".equals(username.trim())&&"1122".equals(password.trim())&&"Sales and Distribution Officer".equals(usertype)){
+            loginErrorLabel.setText("Login Successful");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Masum/SalesAndDistributionOfficerDashboard-view.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) usernameTF.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();}
+        else if("fahim".equals(username.trim())&&"1234".equals(password.trim())&&"Inventory and Supply Manager".equals(usertype)){
+            loginErrorLabel.setText("Login Successful");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Fahim/inventoryandSupplyManagerDashboard.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) usernameTF.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();}
+        else {
             loginErrorLabel.setText("Incorrect username, password, or user type");
         }
-
     }
 }
