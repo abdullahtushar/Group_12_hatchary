@@ -7,24 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.DeliveryManagementViewController">
-    <TableView fx:id="deliveryConfirmStutusTableView" layoutX="3.0" layoutY="98.0" prefHeight="159.0" prefWidth="678.0">
+    <TableView fx:id="deliveryTableView" layoutX="3.0" layoutY="98.0" prefHeight="159.0" prefWidth="678.0">
     <columns>
         <TableColumn fx:id="deliveryCustomerNameColumn" prefWidth="75.0" text="Name" />
-        <TableColumn fx:id="deliveryCustomerPhoneColumn" prefWidth="75.0" text="Phone" />
-        <TableColumn fx:id="deliveryCustomerLocationColumn" prefWidth="50.666656494140625" text="Area" />
+        <TableColumn fx:id="deliveryCustomerPhoneColumn" prefWidth="59.33330535888672" text="Phone" />
+        <TableColumn fx:id="deliveryCustomerLocationColumn" prefWidth="66.66668701171875" text="Area" />
         <TableColumn fx:id="deliveryFishNameColumn" prefWidth="77.33335876464844" text="Fish Name" />
         <TableColumn fx:id="deliveryPricePerKgColumn" prefWidth="82.0" text="Price Per kg" />
         <TableColumn fx:id="deliveryFishAmountColumn" prefWidth="123.33331298828125" text="Fish Amount (kg)" />
-        <TableColumn fx:id="deliveryTotalCostCoumn" minWidth="0.0" prefWidth="90.66665649414062" text="Total Cost" />
-        <TableColumn fx:id="updateStutasCoumn" minWidth="0.0" prefWidth="103.3333740234375" text="Status" />
-         <TableColumn fx:id="deliveryFishNameColumn1" prefWidth="77.33335876464844" text="Fish Name" />
+        <TableColumn fx:id="totalColumn" minWidth="0.0" prefWidth="99.33328247070312" text="Total Cost" />
+        <TableColumn fx:id="updateStutasCoumn" minWidth="0.0" prefWidth="95.3333740234375" text="Status" />
     </columns>
     </TableView>
 
 
-   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-   <Button layoutX="610.0" layoutY="410.0" mnemonicParsing="false" text="Logout" />
-   <Button layoutX="280.0" layoutY="286.0" mnemonicParsing="false" text="Delivery " />
+   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
+   <Button layoutX="610.0" layoutY="410.0" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+   <Button layoutX="198.0" layoutY="262.0" mnemonicParsing="false" onAction="#deliveryOnAction" text="Delivery " />
    <Label fx:id="errorLabel" layoutX="136.0" layoutY="328.0" prefHeight="63.0" prefWidth="435.0" />
+   <Button layoutX="49.0" layoutY="262.0" mnemonicParsing="false" onAction="#loadCorfirmedOrderAction" text="Load Confirmed Order" />
+   <Button layoutX="463.0" layoutY="262.0" mnemonicParsing="false" onAction="#loadDeliveryAction" text="Load Delivered Order" />
+   <Button layoutX="293.0" layoutY="262.0" mnemonicParsing="false" onAction="#saveDeliveryAction" text="Save Delivery Order" />
 
 </AnchorPane>
