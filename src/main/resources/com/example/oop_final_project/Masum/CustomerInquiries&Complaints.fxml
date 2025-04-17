@@ -10,16 +10,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.InquiriesComplaintsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.CustomerInquiriesComplaintsCointroller">
    <children>
       <ComboBox fx:id="inquiriesComplaintsCB" layoutX="50.0" layoutY="65.0" prefHeight="25.0" prefWidth="178.0" promptText="Inquiries or Complaints" />
-      <Label layoutX="179.0" layoutY="20.0" prefHeight="34.0" prefWidth="239.0" text="Inquiries &amp; Complaints">
+      <Label layoutX="199.0" layoutY="20.0" prefHeight="34.0" prefWidth="239.0" text="Inquiries &amp; Complaints">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TableView layoutY="154.0" prefHeight="200.0" prefWidth="636.0">
+      <TableView fx:id="showInquiriesAndComplantTable" layoutY="154.0" prefHeight="200.0" prefWidth="637.0">
         <columns>
           <TableColumn fx:id="nameColumn" prefWidth="116.66665649414062" text="Name" />
           <TableColumn fx:id="contentColumn" prefWidth="190.66666412353516" text="Content" />
@@ -30,7 +29,12 @@
       <TextField fx:id="responseToCustomerTF" layoutX="419.0" layoutY="65.0" prefHeight="25.0" prefWidth="199.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Label layoutX="344.0" layoutY="69.0" prefHeight="17.0" prefWidth="56.0" text="Response" />
-      <Button layoutX="11.0" layoutY="12.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="547.0" layoutY="360.0" mnemonicParsing="false" text="Logout" />
+      <Button layoutX="11.0" layoutY="12.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+      <Button layoutX="547.0" layoutY="360.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
+      <Button fx:id="saveOnAction" layoutX="478.0" layoutY="360.0" mnemonicParsing="false" onAction="#saveDataOnAction" text="Save" />
+      <Button fx:id="addOnAction" layoutX="582.0" layoutY="120.0" mnemonicParsing="false" onAction="#addResponsOnAction" text="Add" />
+      <Label fx:id="errorLabel" layoutX="17.0" layoutY="112.0" prefHeight="34.0" prefWidth="458.0" />
+      <Button layoutX="483.0" layoutY="120.0" mnemonicParsing="false" onAction="#showContentOnAction" text="Show Content" />
+      <Button layoutX="400.0" layoutY="360.0" mnemonicParsing="false" onAction="#loadDataOnAction" text="Load Data" />
    </children>
 </AnchorPane>
