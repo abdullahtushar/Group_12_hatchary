@@ -17,31 +17,35 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="115.0" prefHeight="17.0" prefWidth="65.0" text="Extra Hour" />
+      <Label layoutX="363.0" layoutY="148.0" prefHeight="17.0" prefWidth="65.0" text="Extra Hour" />
       <Label fx:id="employeeNameColumn" layoutX="40.0" layoutY="78.0" text="Employee Name" />
-      <Label fx:id="employeeIdTF" layoutX="345.0" layoutY="78.0" text="Employee Id" />
-      <Label layoutX="346.0" layoutY="115.0" text="Hourly Rate" />
-      <TextField fx:id="hourlyRateTF" layoutX="438.0" layoutY="111.0" />
-      <TextField fx:id="extraHourTF" layoutX="146.0" layoutY="108.0" />
+      <Label layoutX="355.0" layoutY="78.0" text="Employee Id" />
+      <Label layoutX="48.0" layoutY="156.0" text="Hourly Rate" />
+      <TextField fx:id="hourlyRateTF" layoutX="144.0" layoutY="152.0" />
+      <TextField fx:id="extraHourTF" layoutX="438.0" layoutY="144.0" />
       <TextField fx:id="employeeNameTF" layoutX="146.0" layoutY="74.0" />
       <TextField fx:id="employeeIdTF" layoutX="438.0" layoutY="74.0" />
-      <Label layoutX="40.0" layoutY="150.0" text="Date" />
-      <DatePicker fx:id="dateDp" layoutX="146.0" layoutY="146.0" prefHeight="25.0" prefWidth="149.0" />
-      <ComboBox fx:id="departmentCB" layoutX="438.0" layoutY="146.0" prefWidth="150.0" promptText="Department" />
-      <TableView fx:id="errorLabel" layoutY="257.0" prefHeight="200.0" prefWidth="614.0">
+      <Label layoutX="358.0" layoutY="115.0" text="Date" />
+      <DatePicker fx:id="dateDp" layoutX="438.0" layoutY="111.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="departmentCB" layoutX="146.0" layoutY="111.0" prefWidth="150.0" promptText="Department" />
+      <TableView fx:id="overtimeable" layoutY="292.0" prefHeight="200.0" prefWidth="656.0">
         <columns>
-          <TableColumn prefWidth="105.33334600925446" text="Employee Name" />
-          <TableColumn fx:id="employeeIdColumn" prefWidth="81.33333587646484" text="Employee Id" />
-            <TableColumn fx:id="hourlyRateColumn" prefWidth="87.33335876464844" text="Hourly Rate" />
-            <TableColumn fx:id="etraHourColumn" prefWidth="78.6666259765625" text="Extra Hour" />
-            <TableColumn fx:id="departmentColumn" prefWidth="107.99993896484375" text="Department" />
-            <TableColumn fx:id="dateColumn" prefWidth="74.66659545898438" text="Date" />
-            <TableColumn fx:id="StatusColumn" prefWidth="80.00006103515625" text="Status" />
+          <TableColumn fx:id="staffNameColumn" prefWidth="80.66666030883789" text="Staff Name" />
+          <TableColumn fx:id="employeeIdColumn" prefWidth="79.33333587646484" text="Staff Id" />
+            <TableColumn fx:id="hourlyRateColumn" prefWidth="74.66667175292969" text="Hourly Rate" />
+            <TableColumn fx:id="etraHourColumn" prefWidth="70.6666259765625" text="Extra Hour" />
+            <TableColumn fx:id="totalColumn" prefWidth="87.33331298828125" text="Total Amount" />
+            <TableColumn fx:id="departmentColumn" prefWidth="94.66665649414062" text="Department" />
+            <TableColumn fx:id="dateColumn" prefWidth="84.0" text="Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="80.66668701171875" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="39.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="534.0" layoutY="482.0" mnemonicParsing="false" text="Logout" />
-      <Label fx:id="errorLabel" layoutX="40.0" layoutY="179.0" prefHeight="64.0" prefWidth="425.0" />
-      <Button layoutX="519.0" layoutY="198.0" mnemonicParsing="false" text="Add " />
+      <Button layoutX="39.0" layoutY="28.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
+      <Button layoutX="534.0" layoutY="492.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
+      <Button layoutX="435.0" layoutY="179.0" mnemonicParsing="false" onAction="#addOnAction" text="Add " />
+      <Button layoutX="435.0" layoutY="246.0" mnemonicParsing="false" onAction="#confirmedRejectOnAction" prefHeight="39.0" prefWidth="186.0" text="Confirmed or Rejected Payment" />
+      <Button layoutX="502.0" layoutY="179.0" mnemonicParsing="false" onAction="#payOverTimeOnAction" text="Pay Overtime" />
+      <Button layoutX="435.0" layoutY="211.0" mnemonicParsing="false" onAction="#showProcessingOnAction" text="Show Pending Payment" />
+      <Label fx:id="errorLabel" layoutX="39.0" layoutY="192.0" prefHeight="64.0" prefWidth="391.0" />
    </children>
 </AnchorPane>
