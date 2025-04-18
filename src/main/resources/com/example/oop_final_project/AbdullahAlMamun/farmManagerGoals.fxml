@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="496.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.FarmManagerGoals">
+   <children>
+      <Label layoutX="70.0" layoutY="36.0" prefHeight="55.0" prefWidth="294.0" text="Farm Manager Goals">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="85.0" layoutY="149.0" mnemonicParsing="false" onAction="#budgetButtonOnAction" text="Budget Approval" />
+      <Button layoutX="85.0" layoutY="185.0" mnemonicParsing="false" onAction="#inventoryButtonOnAction" text="Inventory Approval " />
+      <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" onAction="#maintenanceOnActiion" text="Maintenance" />
+      <Button layoutX="90.0" layoutY="266.0" mnemonicParsing="false" onAction="#ExpansionPlanOnAction" text="Expansion Plan" />
+      <Button layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#breadAndHatchOnAction" text="Breeding and Hatching" />
+      <Button layoutX="466.0" layoutY="368.0" mnemonicParsing="false" onAction="#previousFarmGoalsbutton" text="Previous" />
+   </children>
+</AnchorPane>
