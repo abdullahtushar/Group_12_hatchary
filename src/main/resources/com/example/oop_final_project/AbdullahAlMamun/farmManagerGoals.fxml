@@ -18,6 +18,6 @@
       <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" onAction="#maintenanceOnActiion" text="Maintenance" />
       <Button layoutX="90.0" layoutY="266.0" mnemonicParsing="false" onAction="#ExpansionPlanOnAction" text="Expansion Plan" />
       <Button layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#breadAndHatchOnAction" text="Breeding and Hatching" />
-      <Button layoutX="466.0" layoutY="368.0" mnemonicParsing="false" onAction="#previousFarmGoalsbutton" text="Previous" />
+      <Button layoutX="468.0" layoutY="367.0" mnemonicParsing="false" onAction="#previousFarmGoalsbutton" text="Previous" />
    </children>
 </AnchorPane>
