@@ -5,19 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="496.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.FarmManagerGoals">
    <children>
-      <Label layoutX="70.0" layoutY="36.0" prefHeight="55.0" prefWidth="294.0" text="Farm Manager Goals">
+      <Label layoutX="70.0" layoutY="36.0" prefHeight="55.0" prefWidth="294.0" text="Farm Manager Dashboard">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="85.0" layoutY="149.0" mnemonicParsing="false" onAction="#budgetButtonOnAction" text="Budget Approval" />
-      <Button layoutX="85.0" layoutY="185.0" mnemonicParsing="false" onAction="#inventoryButtonOnAction" text="Inventory Approval " />
-      <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" onAction="#maintenanceOnActiion" text="Maintenance" />
-      <Button layoutX="90.0" layoutY="266.0" mnemonicParsing="false" onAction="#ExpansionPlanOnAction" text="Expansion Plan" />
-      <Button layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#breadAndHatchOnAction" text="Breeding and Hatching" />
-      <Button layoutX="468.0" layoutY="367.0" mnemonicParsing="false" onAction="#previousFarmGoalsbutton" text="Previous" />
+      <Button layoutX="85.0" layoutY="130.0" mnemonicParsing="false" onAction="#budgetButtonOnAction" prefHeight="33.0" prefWidth="342.0" text="Budget Approval" />
+      <Button layoutX="85.0" layoutY="185.0" mnemonicParsing="false" onAction="#inventoryButtonOnAction" prefHeight="26.0" prefWidth="342.0" text="Inventory Approval " />
+      <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" onAction="#maintenanceOnActiion" prefHeight="26.0" prefWidth="342.0" text="Maintenance" />
+      <Button layoutX="85.0" layoutY="262.0" mnemonicParsing="false" onAction="#ExpansionPlanOnAction" prefHeight="9.0" prefWidth="342.0" text="Expansion Plan" />
+      <Button layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#breadAndHatchOnAction" prefHeight="26.0" prefWidth="342.0" text="Breeding and Hatching" />
+      <Button layoutX="468.0" layoutY="367.0" mnemonicParsing="false" onAction="#backToLoginButton" text="Back to login" />
    </children>
 </AnchorPane>

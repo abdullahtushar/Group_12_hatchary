@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="411.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.PreventionAndTreatment">
+   <children>
+      <Label layoutX="47.0" layoutY="52.0" prefHeight="56.0" prefWidth="286.0" text="Prevention And Treatment">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="RecordDiseaseComboBOx" layoutX="182.0" layoutY="133.0" prefWidth="150.0" />
+      <Label layoutX="47.0" layoutY="132.0" prefHeight="26.0" prefWidth="95.0" text="Record Disease" />
+      <Label layoutX="64.0" layoutY="172.0" text="Recod Date" />
+      <Label layoutX="59.0" layoutY="108.0" text="Fish Name" />
+      <TextField fx:id="fishNameTextBox" layoutX="183.0" layoutY="95.0" />
+      <DatePicker fx:id="RecordDatePicker" layoutX="170.0" layoutY="168.0" />
+      <TableView fx:id="TreatmentTableView" layoutX="345.0" layoutY="81.0" prefHeight="200.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="fishNameColumn" prefWidth="75.0" text="Fish Name" />
+          <TableColumn fx:id="DiseasesCulumn" prefWidth="104.79989624023438" text="Disease" />
+            <TableColumn fx:id="DatePickerCulumn" prefWidth="121.60009765625" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="270.0" layoutY="224.0" mnemonicParsing="false" onAction="#SubmitButtonTreatment" text="Submit" />
+      <Button layoutX="68.0" layoutY="319.0" mnemonicParsing="false" onAction="#BackHomebutton" text="Back" />
+      <Button layoutX="530.0" layoutY="332.0" mnemonicParsing="false" onAction="#TreatmentHomeButton" text="Home" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="490.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.StockingHarvestingCoordination">
+   <children>
+      <Label layoutX="68.0" layoutY="39.0" />
+      <Label layoutX="91.0" layoutY="57.0" prefHeight="46.0" prefWidth="244.0" text="Stocking and Harvesting">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fishSpeciesTextBox" layoutX="217.0" layoutY="148.0" />
+      <TextField fx:id="QuantilyTextBox" layoutX="217.0" layoutY="178.0" />
+      <Label layoutX="113.0" layoutY="148.0" prefHeight="26.0" prefWidth="83.0" text="Fish Species" />
+      <Label layoutX="101.0" layoutY="182.0" />
+      <Label layoutX="113.0" layoutY="220.0" text="Date Picker:" />
+      <Label layoutX="118.0" layoutY="182.0" text=" Quantity" />
+      <DatePicker fx:id="DatePIckerStock" layoutX="204.0" layoutY="216.0" />
+      <Button layoutX="283.0" layoutY="282.0" mnemonicParsing="false" onAction="#SendScheduleButton" text="Send Schedule" />
+      <Label layoutX="129.0" layoutY="343.0" text="Status" />
+      <Label fx:id="successfulStatusStock" layoutX="208.0" layoutY="343.0" prefHeight="34.0" prefWidth="370.0" />
+   </children>
+</AnchorPane>

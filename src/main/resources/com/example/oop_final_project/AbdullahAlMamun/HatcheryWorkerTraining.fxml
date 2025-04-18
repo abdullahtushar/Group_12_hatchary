@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.HatcheryWorkerTraining">
+   <children>
+      <Label layoutX="40.0" layoutY="38.0" prefHeight="42.0" prefWidth="394.0" text="Hatchery Worker Schedule Training Session">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="TrainingDatePicker" layoutX="143.0" layoutY="96.0" />
+      <TextField fx:id="TrainingTopicTextBox" layoutX="156.0" layoutY="139.0" />
+      <ComboBox fx:id="selectWorkerCombo" layoutX="155.0" layoutY="174.0" prefWidth="150.0" />
+      <Button layoutX="185.0" layoutY="237.0" mnemonicParsing="false" onAction="#ScheduleSessionButton" text="Schedule Session" />
+      <Label layoutX="40.0" layoutY="100.0" />
+      <Label layoutX="22.0" layoutY="100.0" text="Select Training Date" />
+      <Label layoutX="37.0" layoutY="143.0" text="Training Topic" />
+      <Label layoutX="22.0" layoutY="178.0" />
+      <Label layoutX="34.0" layoutY="178.0" text=" Select Workers" />
+      <Button layoutX="445.0" layoutY="314.0" mnemonicParsing="false" onAction="#BackToDashboardButton" text="Back To Dashboard" />
+      <Label layoutX="480.0" layoutY="113.0" text="Status" />
+      <Label layoutX="466.0" layoutY="135.0" />
+      <Label fx:id="StatusUpdateLabel" layoutX="402.0" layoutY="140.0" prefHeight="49.0" prefWidth="189.0" />
+   </children>
+</AnchorPane>

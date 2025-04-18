@@ -68,6 +68,20 @@ public class LoginController {
             Stage stage = (Stage) usernameTF.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();}
+        else if("tushar".equals(username.trim())&&"1111".equals(password.trim())&&"Farm Manager".equals(usertype)){
+            loginErrorLabel.setText("Login Successful");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AbdullahAlMamun/farmManagerGoals.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) usernameTF.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();}
+        else if("tushar".equals(username.trim())&&"1111".equals(password.trim())&&"Aquaculture Specialist".equals(usertype)){
+            loginErrorLabel.setText("Login Successful");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AbdullahAlMamun/AquacultureDashboard .fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) usernameTF.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();}
         else {
             loginErrorLabel.setText("Incorrect username, password, or user type");
         }
