@@ -3,12 +3,7 @@ package com.example.oop_final_project.Masum;
 import java.time.LocalDate;
 
 public class FinancialReport {
-    //- reportType: string
-//- startDate: Date
-//- endDate: Date
-//- totalIncome: float
-//- totalExpenses: float
-//- netProfitOrLoss: float
+
     private String reportType;
     private LocalDate startDate;
     private LocalDate endDate;
