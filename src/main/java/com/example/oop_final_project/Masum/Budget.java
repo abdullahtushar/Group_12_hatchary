@@ -1,13 +1,15 @@
 package com.example.oop_final_project.Masum;
 
 import java.io.Serializable;
+import java.io.StringReader;
 import java.time.LocalDate;
 
 public class Budget implements Serializable {
     private double feed, medicine, utility, salaries, total;
     private LocalDate startDate, endDate;
+    private String  status;
 
-    public Budget(double feed, double medicine, double utility, double salaries, double total, LocalDate startDate, LocalDate endDate) {
+    public Budget(double feed, double medicine, double utility, double salaries, double total, LocalDate startDate, LocalDate endDate, String status) {
         this.feed = feed;
         this.medicine = medicine;
         this.utility = utility;
@@ -15,6 +17,7 @@ public class Budget implements Serializable {
         this.total = total;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.status = status;
     }
 
     public double getFeed() {
@@ -73,16 +76,11 @@ public class Budget implements Serializable {
         this.endDate = endDate;
     }
 
-    @Override
-    public String toString() {
-        return "Budget{" +
-                "feed=" + feed +
-                ", medicine=" + medicine +
-                ", utility=" + utility +
-                ", salaries=" + salaries +
-                ", total=" + total +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
