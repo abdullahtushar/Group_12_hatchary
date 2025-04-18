@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -20,27 +21,45 @@ import java.util.ArrayList;
 
 public class OrderItemCustomerController {
 
-    @FXML private TextField fishAmountTF;
-    @FXML private TableColumn<Customer, String> fishNameColumn;
-    @FXML private TextField customerPhoneTF;
-    @FXML private TableColumn<Customer, String> customerLocationColumn;
-    @FXML private Label showPricePerKgLabel;
-    @FXML private ComboBox<String> fishTypeCB;
-    @FXML private TextField customerNameTF;
-    @FXML private DatePicker showOrderDateDPicker;
-    @FXML private TableColumn<Customer, String> customerPhoneColumn;
-    @FXML private TableColumn<Customer, Double> fishAmountColumn;
-    @FXML private TableColumn<Customer, Double> pricePerKgColumn;
-    @FXML private TableView<Customer> OrderTableView;
-    @FXML private Label showFishAmountTF;
-    @FXML private TableColumn<Customer, String> customerNameColumn;
-    @FXML private TableColumn<Customer, Double> totalCostCoumn;
-    @FXML private Label errorLabel;
-    @FXML private TextField customerLocationTF;
+    @FXML
+    private TextField fishAmountTF;
+    @FXML
+    private TableColumn<Customer, String> fishNameColumn;
+    @FXML
+    private TextField customerPhoneTF;
+    @FXML
+    private TableColumn<Customer, String> customerLocationColumn;
+    @FXML
+    private Label showPricePerKgLabel;
+    @FXML
+    private ComboBox<String> fishTypeCB;
+    @FXML
+    private TextField customerNameTF;
+    @FXML
+    private DatePicker showOrderDateDPicker;
+    @FXML
+    private TableColumn<Customer, String> customerPhoneColumn;
+    @FXML
+    private TableColumn<Customer, Double> fishAmountColumn;
+    @FXML
+    private TableColumn<Customer, Double> pricePerKgColumn;
+    @FXML
+    private TableView<Customer> OrderTableView;
+    @FXML
+    private Label showFishAmountTF;
+    @FXML
+    private TableColumn<Customer, String> customerNameColumn;
+    @FXML
+    private TableColumn<Customer, Double> totalCostCoumn;
+    @FXML
+    private Label errorLabel;
+    @FXML
+    private TextField customerLocationTF;
 
     private ArrayList<Customer> placedOrdersList = new ArrayList<>();
     static ArrayList<FishStock> fishStockList = new ArrayList<>();
     static ArrayList<FishSaleSummary> saleSummariesList = new ArrayList<>();
+    static ArrayList<FishSale> fishSaleArrayList = new ArrayList<>();
 
     public void initialize() {
         fishTypeCB.getItems().setAll("Telapia", "Rohita", "Pangas", "Silver Cuff");
@@ -114,6 +133,10 @@ public class OrderItemCustomerController {
                 LocalDate.now()
         );
 
+        FishSale fishSale = new FishSale(fishTypeCB.getValue(), customerLocationTF.getText(),
+                fishPrice, fishAmount, fishPrice*fishAmount,LocalDate.now());
+        fishSaleArrayList.add(fishSale);
+
 
         placedOrdersList.add(customer);
         OrderTableView.getItems().clear();
@@ -121,8 +144,8 @@ public class OrderItemCustomerController {
         errorLabel.setText("Order placed successfully.");
 
 
-
     }
+
     @FXML
     public void generateInvoiceOnAction(ActionEvent actionEvent) {
     }
@@ -149,7 +172,7 @@ public class OrderItemCustomerController {
 
     @FXML
     public void saveOrderOnAction(ActionEvent actionEvent) {
-        if (placedOrdersList.isEmpty()){
+        if (placedOrdersList.isEmpty()) {
             errorLabel.setText("Please enter order!");
             return;
         }
@@ -158,6 +181,15 @@ public class OrderItemCustomerController {
             errorLabel.setText("Place order list saved successfully.");
         } catch (IOException e) {
             errorLabel.setText("Failed to save overtime list.");
+            e.printStackTrace();
+        }
+        try(ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("FishSale.bin"))){
+            outputStream.writeObject(fishSaleArrayList);
+            //errorLabel.setText("File save");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            errorLabel.setText("Fail to save file");
             e.printStackTrace();
         }
     }
