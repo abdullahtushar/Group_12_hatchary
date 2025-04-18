@@ -1,19 +1,17 @@
 package com.example.oop_final_project.Fahim;
 
-import java.time.LocalDate;
-
-public class TrackStock {
+public class StockItem {
     private String itemName;
     private String category;
-    private float currentQuantity;
-    private LocalDate lastUpdated;
+    private Integer initialQuantity;
+    private Float unit;
     private Integer reorderThreshold;
 
-    public TrackStock(String itemName, String category, float currentQuantity, LocalDate lastUpdated, Integer reorderThreshold) {
+    public StockItem(String itemName, String category, Integer initialQuantity, Float unit, Integer reorderThreshold) {
         this.itemName = itemName;
         this.category = category;
-        this.currentQuantity = currentQuantity;
-        this.lastUpdated = lastUpdated;
+        this.initialQuantity = initialQuantity;
+        this.unit = unit;
         this.reorderThreshold = reorderThreshold;
     }
 
@@ -25,14 +23,6 @@ public class TrackStock {
         this.itemName = itemName;
     }
 
-    public float getCurrentQuantity() {
-        return currentQuantity;
-    }
-
-    public void setCurrentQuantity(float currentQuantity) {
-        this.currentQuantity = currentQuantity;
-    }
-
     public String getCategory() {
         return category;
     }
@@ -41,12 +31,12 @@ public class TrackStock {
         this.category = category;
     }
 
-    public LocalDate getLastUpdated() {
-        return lastUpdated;
+    public Integer getInitialQuantity() {
+        return initialQuantity;
     }
 
-    public void setLastUpdated(LocalDate lastUpdated) {
-        this.lastUpdated = lastUpdated;
+    public void setInitialQuantity(Integer initialQuantity) {
+        this.initialQuantity = initialQuantity;
     }
 
     public Integer getReorderThreshold() {
@@ -57,13 +47,21 @@ public class TrackStock {
         this.reorderThreshold = reorderThreshold;
     }
 
+    public Float getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Float unit) {
+        this.unit = unit;
+    }
+
     @Override
     public String toString() {
-        return "TrackStock{" +
+        return "StockItem{" +
                 "itemName='" + itemName + '\'' +
                 ", category='" + category + '\'' +
-                ", currentQuantity=" + currentQuantity +
-                ", lastUpdated=" + lastUpdated +
+                ", initialQuantity=" + initialQuantity +
+                ", unit=" + unit +
                 ", reorderThreshold=" + reorderThreshold +
                 '}';
     }
