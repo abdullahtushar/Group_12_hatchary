@@ -93,7 +93,7 @@ public class AddAndPaySalariesController {
 
         for (AddSalaries ps:salaryArrayList){
             if (ps.getStaffId().equals(staffIdTF.getText())){
-                errorLabel.setText("You can't set salary \nfor a staff two time");
+                errorLabel.setText("You can't add salary \nfor a staff two time");
                 return;
             }
         }
@@ -122,6 +122,7 @@ public class AddAndPaySalariesController {
             if (ps.getStatus().equals("Pending")){
                 ps.setStatus("Payment done");
                 paySalaryArrayList.add(ps);
+                errorLabel.setText("Payment Done");
             }
 
         }
