@@ -1,9 +1,16 @@
 package com.example.oop_final_project.Fahim;
 
+import com.example.oop_final_project.LoginApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class FarmVisits
@@ -45,13 +52,74 @@ public class FarmVisits
 
     @javafx.fxml.FXML
     public void submitButton(ActionEvent actionEvent) {
+        errorMessagesLabel.setText("");
+
+        String name = customerNameTF.getText();
+        String contactStr = contactTF.getText();
+        String visitorStr = visitorTF.getText();
+        LocalDate date = dateDP.getValue();
+
+        if (name.isEmpty() || contactStr.isEmpty() || visitorStr.isEmpty() || date == null) {
+            errorMessagesLabel.setText("All fields are required!");
+            return;
+        }
+
+        try {
+            int contact = Integer.parseInt(contactStr);
+            int visitors = Integer.parseInt(visitorStr);
+
+            Visit visit = new Visit(name, visitors, contact, date);
+            farmVisitTableView.getItems().add(visit);
+
+            customerNameTF.clear();
+            contactTF.clear();
+            visitorTF.clear();
+            dateDP.setValue(null);
+            confirmationCB.getSelectionModel().clearSelection();
+
+            errorMessagesLabel.setText("Submission successful!");
+
+        } catch (NumberFormatException e) {
+            errorMessagesLabel.setText("Contact and visitors must be numbers!");
+        }
+
     }
 
     @javafx.fxml.FXML
-    public void logOutButton(ActionEvent actionEvent) {
+    public void logOutButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
     public void sendButton(ActionEvent actionEvent) {
+        String selectedMethod = confirmationCB.getSelectionModel().getSelectedItem();
+        if (selectedMethod == null) {
+            confirmationMessageTA.setText("Please select a confirmation method.");
+            return;
+        }
+
+        String name = customerNameTF.getText();
+        if (name.isEmpty()) {
+            confirmationMessageTA.setText("Please enter customer name to send confirmation.");
+            return;
+        }
+
+        String message = "Dear " + name + ", your farm visit has been confirmed via " + selectedMethod + ".";
+        confirmationMessageTA.setText(message);
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("customerServiceDashboard.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
+

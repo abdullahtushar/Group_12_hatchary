@@ -32,7 +32,7 @@ public class FarmInformationToCustomers
     @javafx.fxml.FXML
     public void initialize() {
         informationViaCB.getItems().addAll("Email","Phone","SMS");
-        fishSpeciesCB.getItems().addAll("");
+        fishSpeciesCB.getItems().addAll("Tilapia","Carp");
 
         farmHistoryCol.setCellValueFactory(new PropertyValueFactory<>("farmHistory"));
         locationCol.setCellValueFactory(new PropertyValueFactory<>("location"));
