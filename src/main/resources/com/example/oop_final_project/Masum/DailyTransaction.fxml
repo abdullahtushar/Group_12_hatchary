@@ -39,6 +39,8 @@
       <Button layoutX="438.0" layoutY="196.0" mnemonicParsing="false" onAction="#addTransactionOnAction" prefHeight="25.0" prefWidth="111.0" text="Add Transaction" />
       <Button layoutX="33.0" layoutY="16.0" mnemonicParsing="false" onAction="#backOnAction" text="Back" />
       <Button layoutX="514.0" layoutY="442.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
-      <Label fx:id="errorLabe" layoutX="27.0" layoutY="150.0" prefHeight="71.0" prefWidth="385.0" />
+      <Label fx:id="errorLabe" layoutX="27.0" layoutY="143.0" prefHeight="45.0" prefWidth="385.0" />
+      <Button layoutX="105.0" layoutY="196.0" mnemonicParsing="false" onAction="#saveTransaction" text="Save Transaction" />
+      <Button layoutX="234.0" layoutY="196.0" mnemonicParsing="false" onAction="#loadTransaction" text="Load Transaction" />
    </children>
 </AnchorPane>
