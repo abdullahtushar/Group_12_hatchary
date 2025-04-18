@@ -97,7 +97,7 @@ public class CustomerInquiriesComplaintsCointroller {
             os.writeObject(inquiriesComplaintList);
             errorLabel.setText("File saved Successfully");
         } catch (IOException e) {
-            errorLabel.setText("Responded list saved Successfully");
+            errorLabel.setText("File could not save");
             e.printStackTrace();
         }
     }
@@ -107,7 +107,7 @@ public class CustomerInquiriesComplaintsCointroller {
         try(ObjectInputStream ob  = new ObjectInputStream(new FileInputStream("InquireComplaint.bin"))){
             readList = (ArrayList<InquiriesComplaint>) ob.readObject();
         } catch (IOException e) {
-            errorLabel.setText("Could load file");
+            errorLabel.setText("Could not load file");
         } catch (ClassNotFoundException e) {
             errorLabel.setText("Invalid file");
         }

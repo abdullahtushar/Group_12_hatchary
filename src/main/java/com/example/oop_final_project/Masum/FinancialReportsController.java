@@ -1,12 +1,20 @@
 package com.example.oop_final_project.Masum;
 
+import com.example.oop_final_project.LoginApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Locale;
+
+import static com.example.oop_final_project.Masum.DailyTransactionController.summaryList;
 
 public class FinancialReportsController {
 
@@ -36,14 +44,10 @@ public class FinancialReportsController {
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         dateRangeCB.getItems().addAll("Weekly", "Monthly", "Annually", "Custom");
     }
-
-
-
-
     @javafx.fxml.FXML
     public void generateOnAction(ActionEvent actionEvent) {
         if (dateRangeCB.getValue().equals("Custom")) {
-            if (startDateDP.getValue()==null || startDateDP.getValue()==null) {
+            if (startDateDP.getValue()==null || endDateDP.getValue()==null) {
                 errorLabel.setText("You have to select start and end date");
                 return;
             }
@@ -77,7 +81,7 @@ public class FinancialReportsController {
             endDateDP.setDisable(false);
         }
         ArrayList<Summary> filtered = new ArrayList<>();
-        for (Summary s : DailyTransactionController.summaryList) {
+        for (Summary s : summaryList) {
             if (!s.getDate().isBefore(start) && !s.getDate().isAfter(end)) {
                 filtered.add(s);
             }
@@ -87,10 +91,21 @@ public class FinancialReportsController {
     }
 
     @javafx.fxml.FXML
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("FinanceOfficerDashboard.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void logoutOnAction(ActionEvent actionEvent) {
+    public void logoutOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

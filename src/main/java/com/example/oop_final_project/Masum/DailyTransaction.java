@@ -1,8 +1,9 @@
 package com.example.oop_final_project.Masum;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class DailyTransaction {
+public class DailyTransaction implements Serializable {
     private String transactionId, type,sourceOrPurpose;
     private double amount;
     private String notes;

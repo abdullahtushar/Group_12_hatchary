@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -59,6 +59,7 @@ public class ManageBudgetController {
     }
 
     ArrayList<Budget> budgetList = new ArrayList<>();
+    ArrayList<Budget> budgetArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void backonAction(ActionEvent actionEvent) throws IOException {
@@ -80,7 +81,7 @@ public class ManageBudgetController {
             return;
         }
         if (utilityTF.getText().isEmpty()) {
-            errorLabel.setText("Please input medicine budget");
+            errorLabel.setText("Please input utility budget");
             return;
         }
         if (staffSalariesTF.getText().isEmpty()) {
@@ -96,7 +97,7 @@ public class ManageBudgetController {
             return;
         }
 
-        double feed = Double.parseDouble(medicineTF.getText());
+        double feed = Double.parseDouble(feefBudgetTF.getText());
         double medicine = Double.parseDouble(medicineTF.getText());
         double utility = Double.parseDouble(utilityTF.getText());
         double salaries = Double.parseDouble(staffSalariesTF.getText());
@@ -121,11 +122,11 @@ public class ManageBudgetController {
         Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate);
         budgetList.add(budget);
         addBudgetTable.getItems().clear();
-        addBudgetTable.getItems().setAll(budgetList);
+        addBudgetTable.getItems().addAll(budgetList);
         errorLabel.setText("Budget created successfully");
 
-
     }
+
     @javafx.fxml.FXML
     public void logOutButtonOnAction(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
@@ -134,5 +135,37 @@ public class ManageBudgetController {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void loadBudget(ActionEvent actionEvent) {
+        try(ObjectInputStream ob  = new ObjectInputStream(new FileInputStream("Budget.bin"))){
+            budgetArrayList = (ArrayList<Budget>) ob.readObject();
+        } catch (IOException e) {
+            errorLabel.setText("Could not load file");
+        } catch (ClassNotFoundException e) {
+            errorLabel.setText("Invalid file");
+        }
+        addBudgetTable.getItems().clear();
+        addBudgetTable.getItems().addAll(budgetArrayList);
+    }
+
+
+
+
+    @javafx.fxml.FXML
+    public void saveBudgetAction(ActionEvent actionEvent) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Budget.bin"))) {
+            out.writeObject(budgetList);
+            errorLabel.setText("File save successfully");
+        } catch (IOException e) {
+            errorLabel.setText("Failed to save file");
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void clearOnAction(ActionEvent actionEvent) {
+        addBudgetTable.getItems().clear();
     }
 }

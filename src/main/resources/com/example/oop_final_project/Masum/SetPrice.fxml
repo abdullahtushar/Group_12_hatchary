@@ -7,17 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Masum.SetPriceController">
    <children>
       <ComboBox fx:id="fishNameCB" layoutX="42.0" layoutY="68.0" prefHeight="25.0" prefWidth="113.0" promptText="Fish Name" />
-      <Label layoutX="210.0" layoutY="23.0" text="Set Price ">
+      <Label layoutX="254.0" layoutY="23.0" text="Set Price ">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
       <TextField fx:id="setPriceTF" layoutX="360.0" layoutY="68.0" />
       <Label layoutX="286.0" layoutY="72.0" text="Price" />
-      <Button layoutX="240.0" layoutY="175.0" mnemonicParsing="false" onAction="#updatePriceOnAction" text="Update Price" />
+      <Button layoutX="257.0" layoutY="212.0" mnemonicParsing="false" onAction="#updatePriceOnAction" text="Update Price" />
+      <Label fx:id="errorLabel" layoutX="158.0" layoutY="150.0" prefHeight="31.0" prefWidth="307.0" />
+      <Button layoutX="35.0" layoutY="26.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
    </children>
 </AnchorPane>

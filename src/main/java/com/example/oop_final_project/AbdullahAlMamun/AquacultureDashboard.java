@@ -21,7 +21,7 @@ public class AquacultureDashboard
     }
 
     @javafx.fxml.FXML
-    public void WaterQualityButton
+    public void WaterQualityButton(ActionEvent actionEvent){
     }
 
     @javafx.fxml.FXML

@@ -1,8 +1,9 @@
 package com.example.oop_final_project.Masum;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Budget {
+public class Budget implements Serializable {
     private double feed, medicine, utility, salaries, total;
     private LocalDate startDate, endDate;
 
