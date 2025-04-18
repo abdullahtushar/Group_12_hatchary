@@ -1,10 +1,17 @@
 package com.example.oop_final_project.Fahim;
 
+import com.example.oop_final_project.LoginApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -48,9 +55,13 @@ public class TrackStockController {
     }
 
     @javafx.fxml.FXML
-    public void logOutOnAction(ActionEvent actionEvent) {
-        System.out.println("Log out logic here)");
-
+    public void logOutOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -79,6 +90,16 @@ public class TrackStockController {
         } catch (NumberFormatException e) {
             filterLabel.setText("Invalid number format.");
         }
+    }
+
+    @FXML
+    public void backOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("inventoryandSupplyManagerDashboard.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
 

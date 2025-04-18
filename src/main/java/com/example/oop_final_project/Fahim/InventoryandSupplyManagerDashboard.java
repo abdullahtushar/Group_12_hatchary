@@ -15,27 +15,53 @@ public class InventoryandSupplyManagerDashboard {
     }
 
     @javafx.fxml.FXML
-    public void warehouseManagementButton(ActionEvent actionEvent) {
+    public void warehouseManagementButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("storageAndWarehouseConditions.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void inventorySystemButton(ActionEvent actionEvent) {
+    public void inventorySystemButton(ActionEvent actionEvent) throws IOException {
     }
 
     @javafx.fxml.FXML
-    public void supplierTransactionsButton(ActionEvent actionEvent) {
+    public void supplierTransactionsButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("recordsOfSupplierTransactions.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void receiveProductsButton(ActionEvent actionEvent) {
+    public void receiveProductsButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ensureQualitycontrolReceivedproducts.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void transportationSchedulesButton(ActionEvent actionEvent) {
+    public void transportationSchedulesButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("transportationSchedules.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void viewSupplierListButton(ActionEvent actionEvent) {
+    public void viewSupplierListButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("relationshipsWithSuppliers.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     @javafx.fxml.FXML
@@ -48,6 +74,11 @@ public class InventoryandSupplyManagerDashboard {
     }
 
     @javafx.fxml.FXML
-    public void newStockitemButton(ActionEvent actionEvent) {
+    public void newStockitemButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("addNewStockItemInventory.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
