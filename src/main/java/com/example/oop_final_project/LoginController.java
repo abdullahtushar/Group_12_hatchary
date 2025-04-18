@@ -61,6 +61,13 @@ public class LoginController {
             Stage stage = (Stage) usernameTF.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();}
+        else if("fahim".equals(username.trim())&&"1234".equals(password.trim())&&"Customer service representative".equals(usertype)){
+            loginErrorLabel.setText("Login Successful");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Fahim/customerServiceDashboard.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) usernameTF.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();}
         else {
             loginErrorLabel.setText("Incorrect username, password, or user type");
         }

@@ -7,14 +7,14 @@ public class TrackStock {
     private String category;
     private float currentQuantity;
     private LocalDate lastUpdated;
-    private String sortStock;
+    private Integer reorderThreshold;
 
-    public TrackStock(String itemName, String category, float currentQuantity, LocalDate lastUpdated, String sortStock) {
+    public TrackStock(String itemName, String category, float currentQuantity, LocalDate lastUpdated, Integer reorderThreshold) {
         this.itemName = itemName;
         this.category = category;
         this.currentQuantity = currentQuantity;
         this.lastUpdated = lastUpdated;
-        this.sortStock = sortStock;
+        this.reorderThreshold = reorderThreshold;
     }
 
     public String getItemName() {
@@ -25,20 +25,20 @@ public class TrackStock {
         this.itemName = itemName;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public float getCurrentQuantity() {
         return currentQuantity;
     }
 
     public void setCurrentQuantity(float currentQuantity) {
         this.currentQuantity = currentQuantity;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public LocalDate getLastUpdated() {
@@ -49,12 +49,12 @@ public class TrackStock {
         this.lastUpdated = lastUpdated;
     }
 
-    public String getSortStock() {
-        return sortStock;
+    public Integer getReorderThreshold() {
+        return reorderThreshold;
     }
 
-    public void setSortStock(String sortStock) {
-        this.sortStock = sortStock;
+    public void setReorderThreshold(Integer reorderThreshold) {
+        this.reorderThreshold = reorderThreshold;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class TrackStock {
                 ", category='" + category + '\'' +
                 ", currentQuantity=" + currentQuantity +
                 ", lastUpdated=" + lastUpdated +
-                ", sortStock='" + sortStock + '\'' +
+                ", reorderThreshold=" + reorderThreshold +
                 '}';
     }
 }
