@@ -119,7 +119,7 @@ public class ManageBudgetController {
             }
         }
 
-        Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate);
+        Budget budget = new Budget(feed, medicine, utility, salaries, total, startDate, endDate,"Pending");
         budgetList.add(budget);
         addBudgetTable.getItems().clear();
         addBudgetTable.getItems().addAll(budgetList);
