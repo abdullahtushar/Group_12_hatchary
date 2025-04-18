@@ -17,7 +17,7 @@
       <TableView fx:id="tableView" layoutX="26.0" layoutY="136.0" prefHeight="200.0" prefWidth="547.0">
         <columns>
           <TableColumn fx:id="temperatureCol" prefWidth="160.0" text="Temperature" />
-          <TableColumn fx:id="umidityCol" prefWidth="197.0" text="Humidity" />
+          <TableColumn fx:id="HumidityCol" prefWidth="197.0" text="Humidity" />
             <TableColumn fx:id="oxygenLevelCol" prefWidth="189.0" text="Oxygen Levels" />
         </columns>
       </TableView>

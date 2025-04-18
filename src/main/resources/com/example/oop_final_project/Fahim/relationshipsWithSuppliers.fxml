@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="474.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Fahim.RelationshipsWithSuppliers">
+<AnchorPane prefHeight="474.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Fahim.RelationshipsWithSuppliers">
    <children>
       <TextField fx:id="supplierNameTF" layoutX="45.0" layoutY="49.0" promptText="Supplier Name" />
       <TextField fx:id="contactTF" layoutX="227.0" layoutY="49.0" promptText="Contact" />
@@ -33,9 +25,8 @@
       <ComboBox fx:id="contactMethodCB" layoutX="22.0" layoutY="368.0" prefWidth="150.0" promptText="Contact Method" />
       <TextArea fx:id="contactMethodTA" layoutX="14.0" layoutY="399.0" prefHeight="61.0" prefWidth="189.0" />
       <Button layoutX="231.0" layoutY="417.0" mnemonicParsing="false" onAction="#sendEmailButton" prefHeight="25.0" prefWidth="128.0" text="Send Email" />
-      <TextField fx:id="supplierNameTF1" layoutX="433.0" layoutY="304.0" promptText="Supplier Name" />
-      <DatePicker fx:id="expiryDateDP1" layoutX="433.0" layoutY="343.0" prefHeight="25.0" prefWidth="149.0" promptText="Contract Expiry Date" />
-      <TextArea fx:id="contactMethodTA1" layoutX="421.0" layoutY="381.0" prefHeight="54.0" prefWidth="174.0" />
+      <TextField fx:id="nameTF" layoutX="433.0" layoutY="304.0" promptText="Supplier Name" />
+      <DatePicker fx:id="DateDP" layoutX="433.0" layoutY="343.0" prefHeight="25.0" prefWidth="149.0" promptText="Contract Expiry Date" />
       <Button layoutX="595.0" layoutY="304.0" mnemonicParsing="false" onAction="#saveTermButton" prefHeight="25.0" prefWidth="128.0" text="Save Term" />
       <Label fx:id="label" layoutX="600.0" layoutY="347.0" prefHeight="73.0" prefWidth="141.0" text="Label" />
       <Button layoutX="613.0" layoutY="430.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="25.0" prefWidth="128.0" text="log out" />
