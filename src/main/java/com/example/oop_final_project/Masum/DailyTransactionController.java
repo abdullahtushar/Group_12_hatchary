@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -47,8 +47,9 @@ public class DailyTransactionController {
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
     }
-    ArrayList<DailyTransaction>dailyTransactionsList = new ArrayList<>();
+    static ArrayList<DailyTransaction>dailyTransactionsList = new ArrayList<>();
     static ArrayList<Summary> summaryList= new ArrayList<>();
+    ArrayList<DailyTransaction> loadList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void backOnAction(ActionEvent actionEvent) throws IOException {
@@ -100,11 +101,12 @@ public class DailyTransactionController {
 //        dailyTransactionTable.getItems().setAll(dailyTransactionsList);
         errorLabe.setText("Transaction added successfully");
         for (DailyTransaction dt: dailyTransactionsList){
-            if (dt.getDate().isEqual(addDP.getValue())){
-                if (dt.getNotes().equals(noteTF.getText())||dt.getSourceOrPurpose().equals(sourcePurposeTF.getText())){
+            //if (dt.getDate().isEqual(addDP.getValue())){
+            //if (dt.getNotes().equals(noteTF.getText())||dt.getSourceOrPurpose().equals(sourcePurposeTF.getText())){
+                if (dt.getSourceOrPurpose().equals(sourcePurposeTF.getText())){
                     errorLabe.setText("Transaction already exist exist");
                     return;
-                }
+                //}
             }
         }
         dailyTransactionsList.add(dailyTransaction);
@@ -137,8 +139,32 @@ public class DailyTransactionController {
             summaryList.add(newSummary);
         }
 
+    }
 
+    @javafx.fxml.FXML
+    public void loadTransaction(ActionEvent actionEvent) {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("Transaction.bin"))) {
+            loadList = (ArrayList<DailyTransaction>) objectInputStream.readObject();
+        } catch (IOException e) {
+            errorLabe.setText("Could not load data");
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            errorLabe.setText("Invalid data format");
+            e.printStackTrace();
+        }
+        dailyTransactionTable.getItems().clear();
+        dailyTransactionTable.getItems().addAll(loadList);
+    }
 
+    @javafx.fxml.FXML
+    public void saveTransaction(ActionEvent actionEvent) {
+        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("Transaction.bin"))) {
+            objectOutputStream.writeObject(dailyTransactionsList);
+            errorLabe.setText("File save successfully");
+        } catch (IOException e) {
+            errorLabe.setText("Failed to save");
+            e.printStackTrace();
+        }
 
     }
 }
