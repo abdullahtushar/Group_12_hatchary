@@ -77,7 +77,7 @@ public class FarmVisits
             dateDP.setValue(null);
             confirmationCB.getSelectionModel().clearSelection();
 
-            errorMessagesLabel.setText("Submission successful!");
+            errorMessagesLabel.setText("Submission successful");
 
         } catch (NumberFormatException e) {
             errorMessagesLabel.setText("Contact and visitors must be numbers!");
