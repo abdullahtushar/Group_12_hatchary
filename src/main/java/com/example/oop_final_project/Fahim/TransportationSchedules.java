@@ -63,11 +63,9 @@ public class TransportationSchedules
             return;
         }
 
-        // Create a Transportation object and add to table
         Transportation transportation = new Transportation(name, supplier, arrivalDate, departureDate, status);
         tableView.getItems().add(transportation);
 
-        // Clear fields after adding
         nameTF.clear();
         supplierCB.getSelectionModel().clearSelection();
         statusCB.getSelectionModel().clearSelection();
@@ -84,7 +82,7 @@ public class TransportationSchedules
         String selectedSupplier = supplierFilterCB.getValue();
 
         if (selectedSupplier == null || selectedSupplier.equals("All")) {
-            tableView.setItems(tableView.getItems()); // No filter
+            tableView.setItems(tableView.getItems());
             return;
         }
 

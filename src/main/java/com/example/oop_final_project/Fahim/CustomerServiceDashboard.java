@@ -1,5 +1,6 @@
 package com.example.oop_final_project.Fahim;
 
+import com.example.oop_final_project.AbdullahAlMamun.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -53,15 +54,6 @@ public class CustomerServiceDashboard
     }
 
     @javafx.fxml.FXML
-    public void customerComplaintsButton(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("trackCustomerComplaints.fxml"));
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @javafx.fxml.FXML
     public void customerDatabaseButton(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("maintainCustomerDatabase.fxml"));
         Scene scene = new Scene(root);
@@ -87,4 +79,14 @@ public class CustomerServiceDashboard
         stage.setScene(scene);
         stage.show();
     }
+
+    @javafx.fxml.FXML
+    public void customerComplaintButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("trackCustomerComplaints.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

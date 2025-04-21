@@ -50,8 +50,6 @@ public class TrackStockController {
         currentQuantityCol.setCellValueFactory(new PropertyValueFactory<>("currentQuantity"));
         reorderThresholdCol.setCellValueFactory(new PropertyValueFactory<>("reorderThreshold"));
         lastUpdatedCol.setCellValueFactory(new PropertyValueFactory<>("lastUpdated"));
-
-
     }
 
     @javafx.fxml.FXML
