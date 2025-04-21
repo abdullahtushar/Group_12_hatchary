@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="517.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.WaterQualityMangement">
    <children>
       <Label layoutX="59.0" layoutY="45.0" prefHeight="47.0" prefWidth="320.0" text="Water quality Mangement">
@@ -28,7 +27,6 @@
           <TableColumn fx:id="waterQulityCulumn" prefWidth="118.4000244140625" text="Water Quality" />
         </columns>
       </TableView>
-      <Button layoutX="70.0" layoutY="368.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="476.0" layoutY="355.0" mnemonicParsing="false" text="Home" />
+      <Button layoutX="476.0" layoutY="355.0" mnemonicParsing="false" onAction="#aquacultureDashboard" text="Aquaculture Dashboard" />
    </children>
 </AnchorPane>

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="431.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.FishTransferHarvest">
    <children>
       <Label layoutX="38.0" layoutY="29.0" prefHeight="67.0" prefWidth="318.0" text="Fish Transfer and Harvesting">
@@ -19,9 +18,8 @@
       </Label>
       <ComboBox fx:id="speciesCombobox" layoutX="122.0" layoutY="96.0" prefWidth="150.0" />
       <Button layoutX="218.0" layoutY="190.0" mnemonicParsing="false" onAction="#submitButtonFishtransfer" text="Submit" />
-      <Button layoutX="78.0" layoutY="320.0" mnemonicParsing="false" onAction="#backButtonFishTransfer" text="back" />
-      <Button layoutX="476.0" layoutY="333.0" mnemonicParsing="false" onAction="#homeButtonFishTransfer" text="home" />
-      <Label layoutX="32.0" layoutY="100.0" text="select specie:s" />
+      <Button layoutX="450.0" layoutY="330.0" mnemonicParsing="false" onAction="#homeButtonFishTransfer" text="Aquaculture Dashboard" />
+      <Label layoutX="32.0" layoutY="100.0" text="select specie:" />
       <TableView layoutX="384.0" layoutY="73.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="105.60003662109375" text="Selected Species" />

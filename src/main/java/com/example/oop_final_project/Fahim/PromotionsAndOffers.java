@@ -6,8 +6,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
-public class PromotionsAndOffers
-{
+public class PromotionsAndOffers {
     @javafx.fxml.FXML
     private TextField nameTF;
     @javafx.fxml.FXML
@@ -57,6 +56,7 @@ public class PromotionsAndOffers
 
     @javafx.fxml.FXML
     public void savePromotionButton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

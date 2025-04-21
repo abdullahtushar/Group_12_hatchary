@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="490.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.StockingHarvestingCoordination">
+<AnchorPane prefHeight="467.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.StockingHarvestingCoordination">
    <children>
       <Label layoutX="68.0" layoutY="39.0" />
       <Label layoutX="91.0" layoutY="57.0" prefHeight="46.0" prefWidth="244.0" text="Stocking and Harvesting">
@@ -25,5 +25,6 @@
       <Button layoutX="283.0" layoutY="282.0" mnemonicParsing="false" onAction="#SendScheduleButton" text="Send Schedule" />
       <Label layoutX="129.0" layoutY="343.0" text="Status" />
       <Label fx:id="successfulStatusStock" layoutX="208.0" layoutY="343.0" prefHeight="34.0" prefWidth="370.0" />
+      <Button layoutX="418.0" layoutY="401.0" mnemonicParsing="false" onAction="#Dashboardbutton" prefHeight="26.0" prefWidth="159.0" text="Aquaculture Dashboard" />
    </children>
 </AnchorPane>

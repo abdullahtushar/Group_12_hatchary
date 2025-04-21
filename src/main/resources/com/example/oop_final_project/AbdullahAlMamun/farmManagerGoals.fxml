@@ -17,6 +17,7 @@
       <Button layoutX="85.0" layoutY="224.0" mnemonicParsing="false" onAction="#maintenanceOnActiion" prefHeight="26.0" prefWidth="342.0" text="Maintenance" />
       <Button layoutX="85.0" layoutY="262.0" mnemonicParsing="false" onAction="#ExpansionPlanOnAction" prefHeight="9.0" prefWidth="342.0" text="Expansion Plan" />
       <Button layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#breadAndHatchOnAction" prefHeight="26.0" prefWidth="342.0" text="Breeding and Hatching" />
-      <Button layoutX="468.0" layoutY="367.0" mnemonicParsing="false" onAction="#backToLoginButton" text="Back to login" />
+      <Button layoutX="481.0" layoutY="408.0" mnemonicParsing="false" onAction="#backToLoginButton" text="Back to login" />
+      <Button layoutX="85.0" layoutY="344.0" mnemonicParsing="false" onAction="#EmployeeListOnAction" prefHeight="26.0" prefWidth="342.0" text="Employee List" />
    </children>
 </AnchorPane>

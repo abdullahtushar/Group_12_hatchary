@@ -1,6 +1,7 @@
 package com.example.oop_final_project.AbdullahAlMamun;
 
 
+import com.example.oop_final_project.LoginApplication;
 import com.example.oop_final_project.Masum.Budget;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -72,7 +73,8 @@ ArrayList<Budget> loadBudgetArrayList = new ArrayList<>();
 ArrayList<Budget>approvedlist = new ArrayList<>();
     @javafx.fxml.FXML
     public void logOutButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -31,8 +31,13 @@ public class Maintenance
     public void initialize() {
     }
 
+
     @javafx.fxml.FXML
-    public void previousButtonAssign(ActionEvent actionEvent) throws IOException {
+    public void AssignedButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void AquacultureDashButton(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("farmManagerGoals.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -42,10 +47,11 @@ public class Maintenance
     }
 
     @javafx.fxml.FXML
-    public void nextbuttonMantenance(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void AssignedButton(ActionEvent actionEvent) {
+    public void FarmManagerDashButton(ActionEvent actionEvent)  throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("farmManagerGoals.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

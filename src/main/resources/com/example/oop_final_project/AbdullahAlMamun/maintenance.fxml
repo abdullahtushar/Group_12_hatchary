@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="525.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.Maintenance">
    <children>
       <Label layoutX="47.0" layoutY="24.0" prefHeight="60.0" prefWidth="230.0" text="Assign Mantenance  ">
@@ -29,8 +28,7 @@
         </columns>
       </TableView>
       <DatePicker fx:id="assignedDatePicker" layoutX="131.0" layoutY="166.0" />
-      <Button layoutX="589.0" layoutY="401.0" mnemonicParsing="false" onAction="#nextbuttonMantenance" text="Next" />
-      <Button layoutX="62.0" layoutY="401.0" mnemonicParsing="false" onAction="#previousButtonAssign" text="Previous" />
+      <Button layoutX="556.0" layoutY="414.0" mnemonicParsing="false" onAction="#FarmManagerDashButton" text="Farm Manager Dashboard" />
       <Label layoutX="31.0" layoutY="128.0" text="Assigned User" />
       <ComboBox fx:id="AssignedUserCombo" layoutX="131.0" layoutY="124.0" prefWidth="150.0" />
       <Button layoutX="411.0" layoutY="124.0" mnemonicParsing="false" onAction="#AssignedButton" text="Assign " />
