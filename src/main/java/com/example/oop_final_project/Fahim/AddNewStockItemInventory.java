@@ -1,11 +1,18 @@
 package com.example.oop_final_project.Fahim;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AddNewStockItemInventory {
     @javafx.fxml.FXML
@@ -48,5 +55,14 @@ public class AddNewStockItemInventory {
 
     @javafx.fxml.FXML
     public void saveItemOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void BackOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("inventoryandSupplyManagerDashboard.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

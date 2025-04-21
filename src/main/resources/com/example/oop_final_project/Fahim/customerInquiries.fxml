@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="460.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Fahim.CustomerInquiries">
+<AnchorPane prefHeight="460.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.Fahim.CustomerInquiries">
    <children>
       <TextField fx:id="customerNameTF" layoutX="87.0" layoutY="32.0" prefHeight="25.0" prefWidth="200.0" promptText="Customer Name" />
       <TextArea fx:id="messageTA" layoutX="390.0" layoutY="79.0" prefHeight="56.0" prefWidth="200.0" />
@@ -33,5 +25,6 @@
       <Button layoutX="586.0" layoutY="418.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" />
       <ComboBox fx:id="inquiryTypeCB" layoutX="87.0" layoutY="67.0" prefWidth="150.0" promptText="Inquiry Type" />
       <CheckBox layoutX="410.0" layoutY="331.0" mnemonicParsing="false" text="CheckBox" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButton" text="Back" />
    </children>
 </AnchorPane>

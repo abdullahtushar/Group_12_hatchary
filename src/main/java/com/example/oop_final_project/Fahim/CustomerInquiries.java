@@ -57,4 +57,8 @@ public class CustomerInquiries
     @javafx.fxml.FXML
     public void closeInquiryButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BackButton(ActionEvent actionEvent) {
+    }
 }
