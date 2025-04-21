@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.EmployeeList">
+   <children>
+      <Label layoutX="53.0" layoutY="35.0" prefHeight="58.0" prefWidth="258.0" text="Employee List">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="107.0" text="1.Aquaculture Specialist">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="145.0" text="2.Finance Officer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="182.0" text="3.Sales and Distribution Officer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="224.0" text="4.Inventory and Supply Manager">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="270.0" text="5.Customer Service Representativee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="107.0" text="6.Technical Support Officer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="154.0" text="7.Social Media Manager">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="400.0" layoutY="289.0" mnemonicParsing="false" onAction="#farmManagerDashboard" text="Farm Manager Dashboard" />
+   </children>
+</AnchorPane>
