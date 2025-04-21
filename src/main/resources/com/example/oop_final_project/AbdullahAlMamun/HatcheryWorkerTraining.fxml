@@ -24,7 +24,7 @@
       <Label layoutX="37.0" layoutY="143.0" text="Training Topic" />
       <Label layoutX="22.0" layoutY="178.0" />
       <Label layoutX="34.0" layoutY="178.0" text=" Select Workers" />
-      <Button layoutX="445.0" layoutY="314.0" mnemonicParsing="false" onAction="#BackToDashboardButton" text="Back To Dashboard" />
+      <Button layoutX="417.0" layoutY="309.0" mnemonicParsing="false" onAction="#BackToDashboardButton" text="Aquaculture Dashboard" />
       <Label layoutX="480.0" layoutY="113.0" text="Status" />
       <Label layoutX="466.0" layoutY="135.0" />
       <Label fx:id="StatusUpdateLabel" layoutX="402.0" layoutY="140.0" prefHeight="49.0" prefWidth="189.0" />

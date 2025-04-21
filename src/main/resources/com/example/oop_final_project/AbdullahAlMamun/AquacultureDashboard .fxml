@@ -12,14 +12,14 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="486.0" layoutY="320.0" mnemonicParsing="false" onAction="#BackDashboardButtonn" text="Back  " />
       <Button layoutX="78.0" layoutY="75.0" mnemonicParsing="false" onAction="#MonitorAndMaintainButton" prefHeight="26.0" prefWidth="163.0" text="Monitor and Maintain " />
-      <Button layoutX="78.0" layoutY="122.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="163.0" text=" Feeding Schedules" />
+      <Button layoutX="78.0" layoutY="122.0" mnemonicParsing="false" onAction="#FeedingSchedulesButton" prefHeight="26.0" prefWidth="163.0" text=" Feeding Schedules" />
       <Button layoutX="76.0" layoutY="173.0" mnemonicParsing="false" onAction="#FishTransferButton" text="Fish Transfer and Harvesting" />
       <Button layoutX="297.0" layoutY="76.0" mnemonicParsing="false" onAction="#breedingAndHatchingbutton" text=" Fish Breeding and Hatching" />
       <Button layoutX="300.0" layoutY="122.0" mnemonicParsing="false" onAction="#WaterQualityButton" text="Water Quality Management" />
       <Button layoutX="296.0" layoutY="172.0" mnemonicParsing="false" onAction="#DiseasePreventionButton" prefHeight="26.0" prefWidth="166.0" text="Disease Prevention " />
       <Button layoutX="298.0" layoutY="221.0" mnemonicParsing="false" onAction="#StockingAndHarvestingButton" prefHeight="26.0" prefWidth="166.0" text="Stocking and Harvesting" />
       <Button layoutX="77.0" layoutY="221.0" mnemonicParsing="false" onAction="#TrainAndSuperviseButton" prefHeight="26.0" prefWidth="166.0" text="Train and Supervise " />
+      <Button layoutX="451.0" layoutY="331.0" mnemonicParsing="false" onAction="#loginPageButton" text="Login Page" />
    </children>
 </AnchorPane>

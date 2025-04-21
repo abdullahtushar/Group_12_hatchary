@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="439.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.InvantoryApproval">
    <children>
       <Label layoutX="55.0" layoutY="51.0" prefHeight="54.0" prefWidth="308.0" text="Invantory Approval ">
@@ -24,8 +23,7 @@
             <TableColumn prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="478.0" layoutY="391.0" mnemonicParsing="false" onAction="#nextInvantoryOnAction" text="Next" />
-      <Button layoutX="44.0" layoutY="378.0" mnemonicParsing="false" onAction="#prevousInvantoryOnAction" text="Previous" />
+      <Button layoutX="527.0" layoutY="373.0" mnemonicParsing="false" onAction="#homeDashboard" text="Home" />
       <Label layoutX="74.0" layoutY="97.0" prefHeight="36.0" prefWidth="114.0" text="Request from user:" />
       <TextField fx:id="requstTextField" layoutX="195.0" layoutY="103.0" />
       <Button layoutX="376.0" layoutY="103.0" mnemonicParsing="false" onAction="#ApproveButtonInvantory" text="Approve" />
