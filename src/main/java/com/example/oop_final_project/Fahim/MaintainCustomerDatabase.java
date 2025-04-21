@@ -1,8 +1,18 @@
 package com.example.oop_final_project.Fahim;
 
+import com.example.oop_final_project.LoginApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class MaintainCustomerDatabase
 {
@@ -41,6 +51,7 @@ public class MaintainCustomerDatabase
         phoneCol.setCellValueFactory(new PropertyValueFactory<>("phone"));
         StatusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
+    ArrayList<CustomerDatabase> customerList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void searchButton(ActionEvent event) {
@@ -52,7 +63,7 @@ public class MaintainCustomerDatabase
             return;
         }
 
-        for (CustomerDatabase customer : CustomerTableView.getItems()) {
+        for (CustomerDatabase customer : customerList) {
             if (selectedFilter.equals("Email") && customer.getEmail().equalsIgnoreCase(searchInput)) {
                 nameTF.setText(customer.getName());
                 emailTF.setText(customer.getEmail());
@@ -73,8 +84,7 @@ public class MaintainCustomerDatabase
         validationLabel.setText("No customer found.");
     }
 
-
-    @javafx.fxml.FXML
+    @FXML
     public void customerButton(ActionEvent event) {
         String name = nameTF.getText();
         String email = emailTF.getText();
@@ -90,11 +100,10 @@ public class MaintainCustomerDatabase
             Integer phone = Integer.parseInt(phoneText);
 
             CustomerDatabase newCustomer = new CustomerDatabase(name, email, phone, status);
+            customerList.add(newCustomer);
             CustomerTableView.getItems().add(newCustomer);
 
             validationLabel.setText("Customer added successfully!");
-
-            // Clear fields
             nameTF.clear();
             emailTF.clear();
             phoneTF.clear();
@@ -104,9 +113,14 @@ public class MaintainCustomerDatabase
         }
     }
 
-
     @javafx.fxml.FXML
-    public void logOutButton(ActionEvent actionEvent) {
+    public void logoutOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

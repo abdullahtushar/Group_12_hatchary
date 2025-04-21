@@ -51,4 +51,8 @@ public class FarmInformationToCustomers
     @javafx.fxml.FXML
     public void sendButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BackButton(ActionEvent actionEvent) {
+    }
 }
