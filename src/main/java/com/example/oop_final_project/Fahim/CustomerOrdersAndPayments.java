@@ -64,4 +64,8 @@ public class CustomerOrdersAndPayments
     @javafx.fxml.FXML
     public void confirmPaymentButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void logOutButton(ActionEvent actionEvent) {
+    }
 }
