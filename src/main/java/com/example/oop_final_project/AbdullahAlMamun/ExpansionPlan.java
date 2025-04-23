@@ -30,21 +30,19 @@ public class ExpansionPlan
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void expansionHomeButton(ActionEvent actionEvent) {
-    }
+   // @javafx.fxml.FXML
+//    public void expansionHomeButton(ActionEvent actionEvent) {
+//    }
 
     @javafx.fxml.FXML
     public void saveExpansionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void expansionPreviousButton(ActionEvent actionEvent) throws IOException {
+    public void expansionHomeButton(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("farmManagerGoals.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-
-    }
-}
+}}

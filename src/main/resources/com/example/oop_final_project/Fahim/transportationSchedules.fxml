@@ -8,8 +8,8 @@
    <children>
       <TextField fx:id="nameTF" layoutX="35.0" layoutY="57.0" promptText="Enter Supplier Name" />
       <ComboBox fx:id="supplierCB" layoutX="218.0" layoutY="56.0" prefWidth="150.0" promptText="Supplier Type" />
-      <DatePicker layoutX="410.0" layoutY="50.0" prefHeight="25.0" prefWidth="134.0" promptText="Arrival Date" />
-      <DatePicker fx:id="departureDP" layoutX="202.0" layoutY="102.0" prefHeight="25.0" prefWidth="143.0" promptText="Departure Date" />
+      <DatePicker fx:id="arrivalDateDP" layoutX="410.0" layoutY="50.0" prefHeight="25.0" prefWidth="134.0" promptText="Arrival Date" />
+      <DatePicker fx:id="departureDateDP" layoutX="202.0" layoutY="102.0" prefHeight="25.0" prefWidth="143.0" promptText="Departure Date" />
       <Button layoutX="393.0" layoutY="102.0" mnemonicParsing="false" onAction="#addScheduleButton" text="Add Schedule" />
       <Text layoutX="196.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transportation Schedule">
          <font>
@@ -29,5 +29,7 @@
       <Button layoutX="393.0" layoutY="183.0" mnemonicParsing="false" onAction="#filterButton" prefHeight="25.0" prefWidth="59.0" text="Filter" />
       <Button layoutX="566.0" layoutY="2.0" mnemonicParsing="false" onAction="#mainMenuButton" prefHeight="25.0" prefWidth="90.0" text="Main Menu" />
       <ComboBox fx:id="statusCB" layoutX="35.0" layoutY="102.0" prefWidth="150.0" promptText="Status" />
+      <Label fx:id="errorMessageLabel" layoutX="166.0" layoutY="135.0" prefHeight="35.0" prefWidth="315.0" />
+      <Button layoutX="544.0" layoutY="196.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="25.0" prefWidth="90.0" text="Log Out" />
    </children>
 </AnchorPane>

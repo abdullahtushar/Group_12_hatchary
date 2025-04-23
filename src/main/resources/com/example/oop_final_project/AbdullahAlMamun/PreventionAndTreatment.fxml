@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="411.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.PreventionAndTreatment">
+<AnchorPane prefHeight="431.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.PreventionAndTreatment">
    <children>
       <Label layoutX="47.0" layoutY="52.0" prefHeight="56.0" prefWidth="286.0" text="Prevention And Treatment">
          <font>
@@ -31,7 +31,6 @@
         </columns>
       </TableView>
       <Button layoutX="270.0" layoutY="224.0" mnemonicParsing="false" onAction="#SubmitButtonTreatment" text="Submit" />
-      <Button layoutX="68.0" layoutY="319.0" mnemonicParsing="false" onAction="#BackHomebutton" text="Back" />
-      <Button layoutX="530.0" layoutY="332.0" mnemonicParsing="false" onAction="#TreatmentHomeButton" text="Home" />
+      <Button layoutX="498.0" layoutY="337.0" mnemonicParsing="false" onAction="#AquacultureHomeButtonn" text="Aquaculture Dasshboard" />
    </children>
 </AnchorPane>

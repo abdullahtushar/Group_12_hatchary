@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="517.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_final_project.AbdullahAlMamun.WaterQualityMangement">
    <children>
       <Label layoutX="59.0" layoutY="45.0" prefHeight="47.0" prefWidth="320.0" text="Water quality Mangement">
@@ -17,18 +16,18 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="108.0" text="Input PH level:" />
-      <TextField layoutX="144.0" layoutY="104.0" />
+      <Label layoutX="36.0" layoutY="108.0" prefHeight="18.0" prefWidth="86.0" text="Input pH level:" />
+      <TextField fx:id="pHLevelTextBox" layoutX="144.0" layoutY="104.0" />
       <Label layoutX="32.0" layoutY="150.0" text="Input water Quality:" />
-      <ComboBox layoutX="144.0" layoutY="146.0" prefWidth="150.0" />
+      <ComboBox fx:id="waterQualityCombo" layoutX="144.0" layoutY="146.0" prefWidth="150.0" />
       <Button layoutX="240.0" layoutY="193.0" mnemonicParsing="false" onAction="#submitWaterQualityButton" text="Submit" />
       <TableView fx:id="tableWaterQuality" layoutX="360.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn fx:id="phColumn" prefWidth="75.0" text="pH" />
+          <TableColumn fx:id="pHColumn" prefWidth="75.0" text="pH" />
           <TableColumn fx:id="waterQulityCulumn" prefWidth="118.4000244140625" text="Water Quality" />
         </columns>
       </TableView>
-      <Button layoutX="70.0" layoutY="368.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="476.0" layoutY="355.0" mnemonicParsing="false" text="Home" />
+      <Button layoutX="476.0" layoutY="355.0" mnemonicParsing="false" onAction="#aquacultureDashboardButton" text="Aquaculture Dashboard" />
+      <Label fx:id="statusLabel" layoutX="116.0" layoutY="338.0" prefHeight="62.0" prefWidth="194.0" />
    </children>
 </AnchorPane>
