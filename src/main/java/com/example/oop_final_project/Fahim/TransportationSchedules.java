@@ -42,8 +42,6 @@ public class TransportationSchedules
     private DatePicker departureDateDP;
     @javafx.fxml.FXML
     private DatePicker arrivalDateDP;
-    @javafx.fxml.FXML
-    private AnchorPane arrivalDP;
 
     @javafx.fxml.FXML
     public void initialize() {

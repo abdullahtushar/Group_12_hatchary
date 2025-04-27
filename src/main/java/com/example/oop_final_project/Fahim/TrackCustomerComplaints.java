@@ -97,6 +97,7 @@ public class TrackCustomerComplaints {
             dateDP.setValue(null);
             complainStatusCB.setValue(null);
             resolutionNoteTA.clear();
+
         } catch (NumberFormatException e) {
             validationLabel.setText("Contact must be a number.");
         }
@@ -115,9 +116,10 @@ public class TrackCustomerComplaints {
             validationLabel.setText("Please fill in all required fields!");
             return;
         }
+        int contact;
 
         try {
-            int contact = Integer.parseInt(contactStr);
+             contact = Integer.parseInt(contactStr);
             CustomerComplaints newComplaint = new CustomerComplaints(name, complaint, contact, date, status, resolution);
 
             complaintList.add(newComplaint);
@@ -131,6 +133,7 @@ public class TrackCustomerComplaints {
             dateDP.setValue(null);
             complainStatusCB.setValue(null);
             resolutionNoteTA.clear();
+
         } catch (NumberFormatException e) {
             validationLabel.setText("Contact must be a number.");
         }

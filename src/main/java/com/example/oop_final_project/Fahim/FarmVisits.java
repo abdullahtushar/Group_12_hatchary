@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class FarmVisits
-{
+public class FarmVisits {
     @javafx.fxml.FXML
     private TableColumn<Visit, LocalDate> dateCol;
     @javafx.fxml.FXML
@@ -52,8 +51,6 @@ public class FarmVisits
 
     @javafx.fxml.FXML
     public void submitButton(ActionEvent actionEvent) {
-        errorMessagesLabel.setText("");
-
         String name = customerNameTF.getText();
         String contactStr = contactTF.getText();
         String visitorStr = visitorTF.getText();
@@ -62,13 +59,19 @@ public class FarmVisits
         if (name.isEmpty() || contactStr.isEmpty() || visitorStr.isEmpty() || date == null) {
             errorMessagesLabel.setText("All fields are required!");
             return;
+        } else if (Integer.parseInt(visitorStr)<=0) {
+            errorMessagesLabel.setText("Visitor cannot be negative value or zero");
+            return;
+        }else if (date.isBefore(LocalDate.now())) {
+            errorMessagesLabel.setText("Date cannot be before today");
+            return;
         }
 
         try {
             int contact = Integer.parseInt(contactStr);
-            int visitors = Integer.parseInt(visitorStr);
+            int visitor = Integer.parseInt(visitorStr);
 
-            Visit visit = new Visit(name, visitors, contact, date);
+            Visit visit = new Visit(name, visitor, contact, date);
             farmVisitTableView.getItems().add(visit);
 
             customerNameTF.clear();

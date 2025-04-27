@@ -23,11 +23,11 @@ public class Visit {
         this.name = name;
     }
 
-    public Integer getVisitors() {
+    public Integer getVisitor() {
         return visitor;
     }
 
-    public void setVisitors(Integer visitor) {
+    public void setVisitor(Integer visitor) {
         this.visitor = visitor;
     }
 
@@ -51,7 +51,7 @@ public class Visit {
     public String toString() {
         return "Visit{" +
                 "name='" + name + '\'' +
-                ", visitors=" + visitor +
+                ", visitor=" + visitor +
                 ", contact=" + contact +
                 ", date=" + date +
                 '}';
